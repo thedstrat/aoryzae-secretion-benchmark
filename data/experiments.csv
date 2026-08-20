@@ -1,1 +1,1 @@
-experiment_id,study_id,cargo_protein,cargo_uniprot
+experiment_id,study_id,evidence_type,modified_background,control_strain,cargo,construct,conditions,notes

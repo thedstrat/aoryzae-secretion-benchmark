@@ -1,1 +1,1 @@
-outcome_id,experiment_id
+outcome_id,experiment_id,arm,strain,metric,value,unit,fold_vs_control,day,method,source_ref,notes
