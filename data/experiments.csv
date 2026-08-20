@@ -1,4 +1,4 @@
 experiment_id,study_id,evidence_type,modified_background,control_strain,cargo,construct,conditions,notes
-ZHU2012_CHY,ZHU2012,production,NSlD1-sD2,SlD-AKC1,bovine chymosin,PamyB::amyB-kex2-CHY::TamyB::niaD,"5x DPY pH 5.5 (-> ~5.3 by d4), 20 mL, 30C, ~2x10^5 conidia, 3-6 d","Single-copy integration at niaD, confirmed by Southern blot. Medium uses KH2PO4."
-ZHU2012_HLY,ZHU2012,production,NSlD1-sD2,SlD-HLY1,human lysozyme,PamyB::amyB-kex2-HLY::TamyB::niaD,"5x DPY pH 8.0 (-> ~6.5 by d4), 100 mL, 30C, ~10^6 conidia, 3-6 d","Medium uses K2HPO4, not just a pH change. Authors attribute weaker effect to AoSedD being more abundant at acidic pH."
-ZHU2012_PROT,ZHU2012,mechanism,NSlD1-sD2,"NSlD1 (Results); NSPlD1 (Fig. 5 legend)",,,"5x DPY pH 5.5, 20 mL, 30C, 2x10^5 conidia, 3-6 d","The Results text identifies NSlD1 as the control, but the Fig. 5 legend identifies NSPlD1. Both are recorded because the paper is internally inconsistent."
+ZHU2012_CHY,ZHU2012,production,NSlD1-sD2,___,bovine chymosin,PamyB::amyB-kex2-CHY::TamyB::niaD,"5x DPY pH 5.5 (-> ~___ by d4), 20 mL, 30C, ___ conidia, 3-6 d","Single-copy integration at niaD, confirmed by Southern blot. Medium uses KH2PO4."
+ZHU2012_HLY,ZHU2012,production,NSlD1-sD2,___,human lysozyme,PamyB::amyB-kex2-HLY::TamyB::niaD,"5x DPY pH 8.0 (-> ~___ by d4), ___ mL, 30C, ___ conidia, 3-6 d","Medium uses K2HPO4, not just a pH change. Authors attribute weaker effect to AoSedD being more abundant at acidic pH."
+ZHU2012_PROT,ZHU2012,___,NSlD1-sD2,___,,,"5x DPY pH 5.5, 20 mL, 30C, 2x10^5 conidia, 3-6 d",___
