@@ -1,1 +1,12 @@
 outcome_id,experiment_id,arm,strain,metric,value,unit,fold_vs_control,day,method,source_ref,notes
+ZHU_CHY_CTRL,ZHU2012_CHY,control,SlD-AKC1,max CHY yield,27.3,mg/L,1.0,4,milk-clotting activity vs authentic bovine chymosin standard curve,Fig. 6B,
+ZHU_CHY_AKC1,ZHU2012_CHY,modified,SlD1-sD2-AKC1,max CHY yield,78.0,mg/L,2.9,4,milk-clotting activity vs authentic bovine chymosin standard curve,Fig. 6B,
+ZHU_CHY_AKC8,ZHU2012_CHY,modified,SlD1-sD2-AKC8,max CHY yield,75.5,mg/L,2.8,4,milk-clotting activity vs authentic bovine chymosin standard curve,Fig. 6B,
+ZHU_CHY_AKC9,ZHU2012_CHY,modified,SlD1-sD2-AKC9,max CHY yield,77.5,mg/L,2.8,4,milk-clotting activity vs authentic bovine chymosin standard curve,Fig. 6B,
+ZHU_HLY_CTRL,ZHU2012_HLY,control,SlD-HLY1,max HLY yield,12.7,mg/L,1.0,4,lysozyme activity vs M. lysodeikticus,Fig. 6D,
+ZHU_HLY_HLY1,ZHU2012_HLY,modified,SlD1-sD2-HLY1,max HLY yield,22.0,mg/L,1.7,4,lysozyme activity vs M. lysodeikticus,Fig. 6D,
+ZHU_HLY_HLY2,ZHU2012_HLY,modified,SlD1-sD2-HLY2,max HLY yield,20.3,mg/L,1.6,4,lysozyme activity vs M. lysodeikticus,Fig. 6D,
+ZHU_HLY_HLY6,ZHU2012_HLY,modified,SlD1-sD2-HLY6,max HLY yield,19.7,mg/L,1.6,4,lysozyme activity vs M. lysodeikticus,Fig. 6D,
+ZHU_PROT_TOTAL,ZHU2012_PROT,modified,NSlD1-sD2,total protease activity,not_reported,relative,not_reported,3-6,FTC-casein assay,Fig. 5A,"Relative assay; control at day 3 set to 1.0. Decreased vs control."
+ZHU_PROT_TPP,ZHU2012_PROT,modified,NSlD1-sD2,tripeptidyl peptidase activity,not_reported,relative,~0.6,3-6,as described in Jin et al. (2007),"Fig. 5B; Discussion","Relative assay. Described as ~40% lower. Three replicates, mean +/- SD, Student's t-test."
+ZHU_PROT_GROWTH,ZHU2012_PROT,modified,NSlD1-sD2,growth,not_reported,,not_reported,,visual/qualitative,Results: Disruption of the AosedD gene,Grew normally in all culture conditions examined.

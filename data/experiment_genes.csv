@@ -1,1 +1,4 @@
 experiment_id,gene_id,gene_name,edit_type,edit_detail
+ZHU2012_CHY,AO090166000084,AosedD,disruption,ΔAosedD::pyrG
+ZHU2012_HLY,AO090166000084,AosedD,disruption,ΔAosedD::pyrG
+ZHU2012_PROT,AO090166000084,AosedD,disruption,ΔAosedD::pyrG
