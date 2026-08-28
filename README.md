@@ -28,7 +28,7 @@ One row per experiment, using the grain defined below.
 | --- | --- |
 | `experiment_id` | Unique identifier for the experiment. |
 | `study_id` | Study that reports the experiment. |
-| `modified_background` | The engineered strain the production strains were built from. |
+| `edited_parent_strain` | The genetically edited parent strain used to create the measured production strains. |
 | `control_strain` | The strain the modified one was measured against. |
 | `cargo` | The protein the fungus was engineered to produce and secrete ("cargo" is standard usage for anything moved through the secretory pathway). |
 | `construct` | The DNA design used to express the cargo — promoter, carrier fusion, cleavage site, terminator, marker. |
