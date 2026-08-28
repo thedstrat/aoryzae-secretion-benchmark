@@ -88,6 +88,10 @@ One experiment is one intervention × cargo × control × culture condition. Ind
 
 `outcome_id` is deliberately sequential and meaningless — meaning lives in `strain` and `measured_what`, which can be corrected without invalidating an ID.
 
+When two studies share first author and year, append a short distinguishing suffix to `study_id`, e.g. `YOON2009RNAI` vs. a second Yoon 2009 paper.
+
+A `study_id` may be a placeholder (e.g. `CHSB2003`, used when the first author isn't yet known) and may be renamed once the citation is confirmed. Renaming a `study_id` requires updating every dependent row in `experiments.csv`, `experiment_genes.csv`, and `outcomes.csv`.
+
 ### `conditions` format
 
 One human-readable string, with a fixed field order: medium, pH start (pH end by dN), volume, temperature, inoculum, duration. No tildes. Scientific notation as `2e5` / `1e6`, not exponent notation like `2x10^5`. Use `not_reported` for anything the paper omits.
