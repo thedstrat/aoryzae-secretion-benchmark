@@ -68,11 +68,15 @@ One row per measured result for one experimental arm or strain.
 
 ### Scope rule: outcomes vs. experiment notes
 
-An **outcome row** (in `outcomes.csv`) is an observed consequence of the genetic intervention that affects how useful the engineered strain is — product yield, growth, sporulation, morphology, or another performance tradeoff.
+`outcomes.csv` holds **paired measurements**: a value produced by a named strain, with a control to compare against. Yield, activity, spore counts, and other quantified results belong here.
 
-An **experiment note** (the `notes` column in `experiments.csv`) is evidence explaining *why* an effect occurred, or supporting the interpretation of an outcome — enzyme activity assays, protein localization, Western blots confirming identity, or the gene-expression rationale for why a gene was chosen.
+Unquantified observations go in the relevant experiment's `notes`. "Grew normally", "impaired sporulation with no counts given", and similar statements are real findings but have no value, no unit, and no control measurement, so they do not form rows.
 
-There is no separate column distinguishing benchmarkable outcomes from side effects. `measured_what` already does that: a computational user filters to the metrics their model predicts, while a human reads the full set and sees both what an edit gained and what it cost.
+The test is whether the paper measured something against a control, not whether the finding matters.
+
+An **experiment note** (the `notes` column in `experiments.csv`) also covers evidence explaining *why* an effect occurred, or supporting the interpretation of an outcome — enzyme activity assays, protein localization, Western blots confirming identity, or the gene-expression rationale for why a gene was chosen.
+
+Among rows that do qualify for `outcomes.csv`, there is no separate column distinguishing benchmarkable outcomes from side effects. `measured_what` already does that: a computational user filters to the metrics their model predicts, while a human reads the full set and sees both what an edit gained and what it cost.
 
 ### Experiment grain
 
