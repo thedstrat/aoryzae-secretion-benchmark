@@ -44,7 +44,7 @@ One row per gene edit in an experiment; an experiment with several edited genes 
 | `experiment_id` | Experiment in which the gene was edited. |
 | `gene_id` | Stable identifier for the edited gene. |
 | `gene_name` | Readable name or symbol for the edited gene. |
-| `edit_type` | Normalized category: `disruption`, `deletion`, or `overexpression`. |
+| `edit_type` | The kind of edit, using the paper's own term. Values so far: `disruption`. Others (`deletion`, `knockdown`, `overexpression`) will be added as papers require them. |
 | `edit_notation` | The genetic change written exactly as the paper reported it, e.g. `ΔAosedD::pyrG`. |
 
 ### `outcomes.csv`
