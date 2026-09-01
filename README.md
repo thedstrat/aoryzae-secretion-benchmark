@@ -55,8 +55,8 @@ One row per measured result for one experimental arm or strain.
 | --- | --- |
 | `outcome_id` | Unique identifier for the outcome row. |
 | `experiment_id` | Experiment that produced the outcome. |
-| `arm` | Which side of the comparison a measurement came from: `control` or `modified`. |
 | `strain` | Specific strain or independent transformant measured. |
+| `arm` | Which side of the comparison a measurement came from: `control` or `modified`. |
 | `measured_what` | What was measured or observed, e.g. max chymosin yield, growth phenotype, conidia formation. |
 | `value` | Reported numeric or textual result. |
 | `unit` | Unit of the reported value. |
