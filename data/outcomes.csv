@@ -3,7 +3,7 @@ ZHU2012_001,ZHU2012_CHY,control,SlD-AKC1,max CHY yield,27.3,mg/L,1.0,4,milk-clot
 ZHU2012_002,ZHU2012_CHY,modified,SlD1-sD2-AKC1,max CHY yield,78.0,mg/L,2.9,4,milk-clotting activity vs authentic bovine chymosin standard curve,Fig. 6B,
 ZHU2012_003,ZHU2012_CHY,modified,SlD1-sD2-AKC8,max CHY yield,___,mg/L,___,4,milk-clotting activity vs authentic bovine chymosin standard curve,Fig. 6B,
 ZHU2012_004,ZHU2012_CHY,modified,SlD1-sD2-AKC9,max CHY yield,77.5,mg/L,2.8,4,milk-clotting activity vs authentic bovine chymosin standard curve,Fig. 6B,
-ZHU2012_005,ZHU2012_CHY,___,NSlD1-sD2,growth,not_reported,,not_reported,,qualitative observation,Results (AosedD disruption section),"All disruptants grew normally in all culture conditions examined."
+ZHU2012_005,ZHU2012_CHY,___,NSlD1-sD2,growth,not_reported,not_reported,not_reported,not_reported,qualitative observation,Results (AosedD disruption section),"All AosedD disruptants grew normally in all culture conditions examined. Observed on the disruptant background (NSlD1-sD2) before cargo strains were constructed, not on the CHY-producing strains specifically."
 ZHU2012_006,ZHU2012_HLY,control,SlD-HLY1,max HLY yield,12.7,mg/L,1.0,4,lysozyme activity vs M. lysodeikticus,Fig. 6D,
 ZHU2012_007,ZHU2012_HLY,modified,SlD1-sD2-HLY1,max HLY yield,22.0,mg/L,1.7,4,lysozyme activity vs M. lysodeikticus,Fig. 6D,
 ZHU2012_008,ZHU2012_HLY,modified,SlD1-sD2-HLY2,max HLY yield,___,mg/L,___,4,lysozyme activity vs M. lysodeikticus,Fig. 6D,
