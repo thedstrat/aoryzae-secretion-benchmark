@@ -59,14 +59,14 @@ One row per measured result for one experimental arm or strain.
 | `arm` | Which side of the comparison: `control` or `modified`. |
 | `value` | The number reported. |
 | `unit` | What the number is measured in. |
-| `measured_what` | What was measured, e.g. max CHY yield, growth, broth viscosity, conidia formation. |
+| `measured_what` | What was measured, e.g. `Highest secreted CHY yield reported`, growth, broth viscosity, conidia formation. |
 | `vs_control` | How this compares to its control. For example, `2.9x` means 2.9 times the control; the control itself is `1.0x`. |
 | `day` | Timepoint the value was taken at. |
 | `assay` | The method used. Activity-based assays measure only correctly folded, functional protein, so a mg/L value derived from activity is not directly comparable to one measured by mass. |
 | `source_ref` | The figure, table, or section the value came from. Required on every row. |
 | `notes` | Caveats needed to read the value correctly. |
 
-Reading one row: `78.0 | mg/L | max CHY yield | 2.9x` means the strain reached a maximum chymosin yield of 78.0 mg/L, which is 2.9 times the amount produced by its control strain.
+Reading one row: `78.0 | mg/L | Highest secreted CHY yield reported | 2.9x` means the strain reached a maximum chymosin yield of 78.0 mg/L, which is 2.9 times the amount produced by its control strain.
 
 One row = one measurement. A strain with both a yield and a growth measurement gets two rows, distinguished by `measured_what` — never one row holding two values.
 
