@@ -53,20 +53,24 @@ One row per measured result for one experimental arm or strain.
 
 | Column | Meaning |
 | --- | --- |
-| `outcome_id` | Unique identifier for the outcome row. |
-| `experiment_id` | Experiment that produced the outcome. |
-| `strain` | Specific strain or independent transformant measured. |
-| `arm` | Which side of the comparison a measurement came from: `control` or `modified`. |
-| `measured_what` | What was measured or observed, e.g. max chymosin yield, growth phenotype, conidia formation. |
-| `secreted_yield` | Amount/concentration of functional secreted protein measured in the experiment. |
-| `unit` | Unit used for the secreted yield, such as mg/L. |
-| `vs_control` | How much protein the strain produced compared with its control. For example, `2.9x` means 2.9 times as much as the control; the control itself is `1.0x`. |
-| `day` | Culture or measurement day. |
-| `assay` | The lab test used to measure the functional protein output. This is not a purity test. |
-| `source_ref` | Figure, table, or section of the paper where the result can be checked. |
-| `notes` | Relevant outcome details that do not fit another column. |
+| `outcome_id` | Unique per row, formatted `{study_id}_{3-digit sequence}`. |
+| `experiment_id` | Which experiment this measurement belongs to. |
+| `strain` | The exact strain that produced this measurement. |
+| `arm` | Which side of the comparison: `control` or `modified`. |
+| `value` | The number reported. |
+| `unit` | What the number is measured in. |
+| `measured_what` | What was measured, e.g. max CHY yield, growth, broth viscosity, conidia formation. |
+| `vs_control` | How this compares to its control. For example, `2.9x` means 2.9 times the control; the control itself is `1.0x`. |
+| `day` | Timepoint the value was taken at. |
+| `assay` | The method used. Activity-based assays measure only correctly folded, functional protein, so a mg/L value derived from activity is not directly comparable to one measured by mass. |
+| `source_ref` | The figure, table, or section the value came from. Required on every row. |
+| `notes` | Caveats needed to read the value correctly. |
 
-Reading one row: `78.0 | mg/L | 2.9x` means the strain produced 78.0 mg/L of functional secreted protein, which is 2.9 times the amount produced by its control strain.
+Reading one row: `78.0 | mg/L | max CHY yield | 2.9x` means the strain reached a maximum chymosin yield of 78.0 mg/L, which is 2.9 times the amount produced by its control strain.
+
+One row = one measurement. A strain with both a yield and a growth measurement gets two rows, distinguished by `measured_what` — never one row holding two values.
+
+Strain names repeat across studies from the same lab. `SlD-AKC1` appears in both `ZHU2012` and `YOON2010` with different reported values (27.3 and 28.7 mg/L). Always group by `experiment_id`, not by strain alone.
 
 The two assays used so far:
 
