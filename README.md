@@ -58,13 +58,20 @@ One row per measured result for one experimental arm or strain.
 | `strain` | Specific strain or independent transformant measured. |
 | `arm` | Which side of the comparison a measurement came from: `control` or `modified`. |
 | `measured_what` | What was measured or observed, e.g. max chymosin yield, growth phenotype, conidia formation. |
-| `value` | Reported numeric or textual result. |
-| `unit` | Unit of the reported value. |
-| `fold_vs_control` | Result expressed as a fold change relative to the control. |
+| `secreted_yield` | Amount/concentration of functional secreted protein measured in the experiment. |
+| `unit` | Unit used for the secreted yield, such as mg/L. |
+| `vs_control` | How much protein the strain produced compared with its control. For example, `2.9x` means 2.9 times as much as the control; the control itself is `1.0x`. |
 | `day` | Culture or measurement day. |
-| `method` | The assay used to obtain the measurement. Note that activity-based assays measure only correctly folded, functional protein. |
-| `source_ref` | Where in the paper the value came from (figure, table, or section); required on every outcome row. |
+| `assay` | The lab test used to measure the functional protein output. This is not a purity test. |
+| `source_ref` | Figure, table, or section of the paper where the result can be checked. |
 | `notes` | Relevant outcome details that do not fit another column. |
+
+Reading one row: `78.0 | mg/L | 2.9x` means the strain produced 78.0 mg/L of functional secreted protein, which is 2.9 times the amount produced by its control strain.
+
+The two assays used so far:
+
+- `milk-clotting assay` — measures functional chymosin by testing how well the culture liquid clots milk.
+- `lysozyme activity assay` — measures functional lysozyme by testing how well the culture liquid breaks down bacterial cells.
 
 ### Scope rule: outcomes vs. experiment notes
 
