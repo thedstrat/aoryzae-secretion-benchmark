@@ -19,6 +19,9 @@ One row per published paper.
 | `journal` | Journal that published the paper. |
 | `doi` | Digital Object Identifier for the paper. |
 | `pmid` | PubMed identifier for the paper. |
+| `pdf_url` | Direct link to the article PDF when a stable official publisher or repository link is available. This is a convenience field; `doi` remains the canonical reference. May be blank or require publisher access. |
+
+Only official publisher or repository links (e.g. the publisher's own site, PMC, J-STAGE) belong in `pdf_url`. Unofficial mirrors such as ResearchGate or Sci-Hub, and local file paths, are not used.
 
 ### `experiments.csv`
 
