@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+title: "A. oryzae secretion-engineering benchmark"
+type: dataset
+authors:
+  - family-names: Delistraty
+    given-names: Joe
+license: CC0-1.0
+repository-code: "https://github.com/thedstrat/aoryzae-secretion-benchmark"

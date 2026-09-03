@@ -122,3 +122,60 @@ Example: `5x DPY, pH 5.5 (5.3 by d4), 20 mL, 30C, 2e5 conidia, 3-6 d`
 - `not_reported` means the paper was checked and does not provide the value.
 - A blank value means the field genuinely does not apply.
 - `source_ref` identifies the figure, table, or section that supplied a value and is required on every outcome row.
+
+## How papers get curated
+
+Everything you need to add a new paper to the dataset.
+
+### What counts as one experiment
+
+One experiment is **one gene change, tested with one cargo protein, against one control strain, under one set of growth conditions**. Change any one of those four things and you have a second experiment.
+
+Building the same strain twice is not a second experiment. If a paper made two independent transformants carrying the same edit and measured both, that is one experiment with two rows in `outcomes.csv`, told apart by `strain`.
+
+### What earns a row in `outcomes.csv`
+
+A row is a measurement with something to compare it against: a number from a named strain, and a control that number can be read against. No number, or nothing to read it against, means no row.
+
+### Everything else goes in the experiment's notes
+
+The `notes` field on the experiment holds the rest. That covers two kinds of thing:
+
+- **Evidence about why something worked** — protease assays, protein localization, Western blots confirming a protein is what the authors say it is.
+- **Observations with no number attached** — "grew normally", or impaired sporulation with no counts given.
+
+These are real findings. They are just not measurements against a control, so they do not become rows.
+
+### Results the paper reports but published elsewhere
+
+Papers often mention results that appeared in some other publication. Those do not get rows here. Go to the original paper and curate the number from there, or skip it.
+
+### What to put in a cell
+
+- `TODO` — not checked against the paper yet.
+- `not_reported` — checked, and the paper does not give it.
+- Blank — the field does not apply.
+
+### Every outcome needs a source
+
+Every row in `outcomes.csv` needs a `source_ref` pointing at the figure, table, or section the number came from, so anyone can go back and check it.
+
+### Record what the paper says
+
+Write down what is on the page, not what you think the authors meant. If a paper contradicts itself, record both versions and note the conflict rather than picking one.
+
+## Validating the data
+
+`scripts/validate_data.py` checks that the files hold together structurally: IDs are unique within each file, references between files point at rows that exist, `source_ref` and `arm` are filled in on every outcome, and every experiment has at least one gene row and one outcome row.
+
+```
+python scripts/validate_data.py
+```
+
+It exits non-zero if anything fails. It needs pandas.
+
+The script catches typos and broken links between files. It does not catch wrong biology — that is caught by reading the paper.
+
+## License
+
+The data is released under [CC0 1.0 Universal](LICENSE): it is factual information taken from published papers, free for anyone to use for any purpose. Please cite the original papers, which are all listed in `studies.csv`.
