@@ -1,5 +1,5 @@
-experiment_id,gene_id,gene_name,edit_type,edit_notation
-ZHU2012_CHY,AO090166000084,AosedD,disruption,ΔAosedD::pyrG
-ZHU2012_HLY,AO090166000084,AosedD,disruption,ΔAosedD::pyrG
-YOON2010_CHY,AO090010000769,Aovps10,disruption,ΔAovps10::pyrG
-YOON2010_HLY,AO090010000769,Aovps10,disruption,ΔAovps10::pyrG
+experiment_id,gene_id,gene_name,gene_role,edit_type,edit_notation
+ZHU2012_CHY,AO090166000084,AosedD,remove_protease,disruption,ΔAosedD::pyrG
+ZHU2012_HLY,AO090166000084,AosedD,remove_protease,disruption,ΔAosedD::pyrG
+YOON2010_CHY,AO090010000769,Aovps10,fix_misrouting,disruption,ΔAovps10::pyrG
+YOON2010_HLY,AO090010000769,Aovps10,fix_misrouting,disruption,ΔAovps10::pyrG
