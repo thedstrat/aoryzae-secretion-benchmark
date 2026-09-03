@@ -1,6 +1,16 @@
 # aoryzae-secretion-benchmark
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22288125.svg)](https://doi.org/10.5281/zenodo.22288125)
+
 A curated dataset of published *Aspergillus oryzae* secretion-engineering experiments, pairing genetic interventions with measured protein-production outcomes for benchmarking secretion-aware and strain-engineering models.
+
+## Citation
+
+If you use this dataset, please cite it:
+
+> Delistraty, J. (2026). A. oryzae secretion-engineering benchmark (v0.2.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.22288125
+
+Please also cite the original papers the data comes from. They are listed with DOIs in `data/studies.csv`.
 
 ## What's in data/
 

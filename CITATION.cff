@@ -7,3 +7,6 @@ authors:
     given-names: Joe
 license: CC0-1.0
 repository-code: "https://github.com/thedstrat/aoryzae-secretion-benchmark"
+version: 0.2.0
+date-released: 2026-09-03
+doi: 10.5281/zenodo.22288125
