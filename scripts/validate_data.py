@@ -77,7 +77,10 @@ def main():
 
     # experiment_genes.csv has no single ID column: one experiment may edit
     # several genes, so a row is identified by experiment and gene together.
-    gene_keys = genes["experiment_id"] + " + " + genes["gene_id"]
+    # The gene half of that key is gene_name, not gene_id: gene_id is allowed
+    # to be TODO until the locus tag is looked up, and several TODO rows under
+    # one experiment are distinct edits, not duplicates.
+    gene_keys = genes["experiment_id"] + " + " + genes["gene_name"]
 
     checks = [
         ("studies.csv: study_id is unique",
@@ -86,8 +89,8 @@ def main():
             unique(experiments["experiment_id"], "experiment_id")),
         ("outcomes.csv: outcome_id is unique",
             unique(outcomes["outcome_id"], "outcome_id")),
-        ("experiment_genes.csv: experiment_id + gene_id is unique",
-            unique(gene_keys, "experiment_id + gene_id")),
+        ("experiment_genes.csv: experiment_id + gene_name is unique",
+            unique(gene_keys, "experiment_id + gene_name")),
 
         ("experiments.csv: every study_id exists in studies.csv",
             rows_failing(experiments, "study_id", lambda v: v in study_ids,
