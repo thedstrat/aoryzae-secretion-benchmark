@@ -1,5 +1,5 @@
 experiment_id,gene_id,gene_name,gene_role,edit_type,edit_notation
-ZHU2012_CHY,AO090166000084,AosedD,TODO,disruption,ΔAosedD::pyrG
+ZHU2012_CHY,AO090166000084,AosedD,remove_protease,disruption,ΔAosedD::pyrG
 ZHU2012_HLY,AO090166000084,AosedD,remove_protease,disruption,ΔAosedD::pyrG
 YOON2010_CHY,AO090010000769,Aovps10,fix_misrouting,disruption,ΔAovps10::pyrG
 YOON2010_HLY,AO090010000769,Aovps10,fix_misrouting,disruption,ΔAovps10::pyrG
@@ -7,7 +7,7 @@ JIN2007_PEPA,TODO,pepA,remove_protease,disruption,ΔpepA::adeA
 JIN2007_PEPE,TODO,pepE,remove_protease,disruption,ΔpepE::adeA
 JIN2007_ALPA,TODO,alpA,remove_protease,disruption,ΔalpA::adeA
 JIN2007_TPPA,TODO,tppA,remove_protease,disruption,ΔtppA::adeA
-JIN2007_PALB,TODO,palB,TODO,disruption,ΔpalB::adeA
+JIN2007_PALB,TODO,palB,target_regulator,disruption,ΔpalB::adeA
 JIN2007_TPPA_PEPE,TODO,tppA,remove_protease,disruption,ΔtppA::argB
 JIN2007_TPPA_PEPE,TODO,pepE,remove_protease,disruption,ΔpepE::adeA
 JIN2007_TPPA_PALB,TODO,tppA,remove_protease,disruption,ΔtppA::argB

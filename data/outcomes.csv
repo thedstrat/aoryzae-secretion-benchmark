@@ -1,5 +1,5 @@
 outcome_id,experiment_id,strain,arm,value,unit,measured_what,vs_control,day,assay,source_ref,notes
-ZHU2012_001,ZHU2012_CHY,SlD-AKC1,control,27.3,mg/L,TODO,1.0x,4,TODO,Fig. 6B,
+ZHU2012_001,ZHU2012_CHY,SlD-AKC1,control,27.3,mg/L,Highest secreted CHY yield reported,1.0x,4,milk-clotting assay,Fig. 6B,
 ZHU2012_002,ZHU2012_CHY,SlD1-sD2-AKC1,modified,78.0,mg/L,Highest secreted CHY yield reported,2.9x,4,milk-clotting assay,Fig. 6B,
 ZHU2012_003,ZHU2012_CHY,SlD1-sD2-AKC8,modified,75.5,mg/L,Highest secreted CHY yield reported,2.8x,4,milk-clotting assay,Fig. 6B,
 ZHU2012_004,ZHU2012_CHY,SlD1-sD2-AKC9,modified,77.5,mg/L,Highest secreted CHY yield reported,2.8x,4,milk-clotting assay,Fig. 6B,
