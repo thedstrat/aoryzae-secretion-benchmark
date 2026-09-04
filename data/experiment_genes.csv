@@ -7,8 +7,8 @@ JIN2007_PEPA,TODO,pepA,remove_protease,disruption,ΔpepA::adeA
 JIN2007_PEPE,TODO,pepE,remove_protease,disruption,ΔpepE::adeA
 JIN2007_ALPA,TODO,alpA,remove_protease,disruption,ΔalpA::adeA
 JIN2007_TPPA,TODO,tppA,remove_protease,disruption,ΔtppA::adeA
-JIN2007_PALB,TODO,palB,target_regulator,disruption,ΔpalB::adeA
+JIN2007_PALB,TODO,palB,target_regulator,TODO,ΔpalB::adeA
 JIN2007_TPPA_PEPE,TODO,tppA,remove_protease,disruption,ΔtppA::argB
 JIN2007_TPPA_PEPE,TODO,pepE,remove_protease,disruption,ΔpepE::adeA
 JIN2007_TPPA_PALB,TODO,tppA,remove_protease,disruption,ΔtppA::argB
-JIN2007_TPPA_PALB,TODO,palB,target_regulator,disruption,ΔpalB::adeA
+JIN2007_TPPA_PALB,TODO,palB,target_regulator,TODO,ΔpalB::adeA
