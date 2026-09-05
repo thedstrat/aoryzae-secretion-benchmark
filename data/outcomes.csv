@@ -13,12 +13,12 @@ YOON2010_003,YOON2010_CHY,SlDv10-AKC4,modified,70.3,mg/L,Highest secreted CHY yi
 YOON2010_004,YOON2010_HLY,SlD-HLY1,control,11.1,mg/L,Highest secreted HLY yield reported,1.0x,4,lysozyme activity assay,Fig. 5D,
 YOON2010_005,YOON2010_HLY,SlDv10-HLY1,modified,22.6,mg/L,Highest secreted HLY yield reported,2.0x,4,lysozyme activity assay,Fig. 5D,
 YOON2010_006,YOON2010_HLY,SlDv10-HLY2,modified,24.6,mg/L,Highest secreted HLY yield reported,2.2x,4,lysozyme activity assay,Fig. 5D,
-JIN2007_001,JIN2007_TPPA,NA-2L,control,15.6,mg/L,Highest secreted HLY yield reported,1.0x,4,"lysozyme activity vs M. lysodeikticus, converted to mg/L using authentic HLY specific activity (100,000 U/mg)",Fig. 4,
-JIN2007_002,JIN2007_TPPA,NA-2L-tp5,modified,21.2,mg/L,Highest secreted HLY yield reported,1.36x,4,"lysozyme activity vs M. lysodeikticus, converted to mg/L using authentic HLY specific activity (100,000 U/mg)",Fig. 4, no exact measurement reported, estimated from fig 4
-JIN2007_003,JIN2007_PEPA,NA-2L-peA4,modified,16.5,mg/L,Highest secreted HLY yield reported,1.05x,4,"lysozyme activity vs M. lysodeikticus, converted to mg/L using authentic HLY specific activity (100,000 U/mg)",Fig. 4,
-JIN2007_004,JIN2007_PEPE,NA-2L-peE10,modified,17.0,mg/L,Highest secreted HLY yield reported,1.10x,4,"lysozyme activity vs M. lysodeikticus, converted to mg/L using authentic HLY specific activity (100,000 U/mg)",Fig. 4, no exact measurement reported, estimated from fig 4
-JIN2007_005,JIN2007_ALPA,NA-2L-al3,modified,17.0,mg/L,Highest secreted HLY yield reported,1.10x,4,"lysozyme activity vs M. lysodeikticus, converted to mg/L using authentic HLY specific activity (100,000 U/mg)",Fig. 4, no exact measurement reported, estimated from fig 4
-JIN2007_006,JIN2007_PALB,NA-2L-pa3,modified,17.8,mg/L,Highest secreted HLY yield reported,1.14x,4,"lysozyme activity vs M. lysodeikticus, converted to mg/L using authentic HLY specific activity (100,000 U/mg)",Fig. 4,
-JIN2007_007,JIN2007_TPPA_PEPE,N-2L,control,15.6,mg/L,Highest secreted HLY yield reported,1.0x,4,"lysozyme activity vs M. lysodeikticus, converted to mg/L using authentic HLY specific activity (100,000 U/mg)",Fig. 5, no exact measurement reported, estimated from comparison
-JIN2007_008,JIN2007_TPPA_PEPE,N2L-peE-tp6,modified,25.4,mg/L,Highest secreted HLY yield reported,1.63x,4,"lysozyme activity vs M. lysodeikticus, converted to mg/L using authentic HLY specific activity (100,000 U/mg)",Fig. 5,
-JIN2007_009,JIN2007_TPPA_PALB,N2L-pa-tp6,modified,16.8,mg/L,Highest secreted HLY yield reported,1.08x,4,"lysozyme activity vs M. lysodeikticus, converted to mg/L using authentic HLY specific activity (100,000 U/mg)",Fig. 5, no exact measurement reported, estimated from fig 5
+JIN2007_001,JIN2007_TPPA,NA-2L,control,15.6,mg/L,Highest secreted HLY yield reported,1.0x,4,lysozyme activity assay,Fig. 4,
+JIN2007_002,JIN2007_TPPA,NA-2L-tp5,modified,21.2,mg/L,Highest secreted HLY yield reported,1.36x,4,lysozyme activity assay,Fig. 4,
+JIN2007_003,JIN2007_PEPA,NA-2L-peA4,modified,16.5,mg/L,Highest secreted HLY yield reported,1.06x,4,lysozyme activity assay,Fig. 4,"read from Fig. 4, not stated in text"
+JIN2007_004,JIN2007_PEPE,NA-2L-peE10,modified,17.0,mg/L,Highest secreted HLY yield reported,1.09x,4,lysozyme activity assay,Fig. 4,"read from Fig. 4, not stated in text"
+JIN2007_005,JIN2007_ALPA,NA-2L-al3,modified,17.0,mg/L,Highest secreted HLY yield reported,1.09x,4,lysozyme activity assay,Fig. 4,"read from Fig. 4, not stated in text"
+JIN2007_006,JIN2007_PALB,NA-2L-pa3,modified,17.8,mg/L,Highest secreted HLY yield reported,1.14x,4,lysozyme activity assay,Fig. 4,"calculated from the stated 14% increase, not read from the figure"
+JIN2007_007,JIN2007_TPPA_PEPE,N-2L,control,15.6,mg/L,Highest secreted HLY yield reported,1.0x,4,lysozyme activity assay,Fig. 5,back-calculated from 25.4 / 1.63; no N-2L value is stated in the paper
+JIN2007_008,JIN2007_TPPA_PEPE,N2L-peE-tp6,modified,25.4,mg/L,Highest secreted HLY yield reported,1.63x,4,lysozyme activity assay,Fig. 5,
+JIN2007_009,JIN2007_TPPA_PALB,N2L-pa-tp6,modified,16.0,mg/L,Highest secreted HLY yield reported,1.03x,4,lysozyme activity assay,Fig. 5,"read from Fig. 5, not stated in text; fold-change is a ratio of two estimates"

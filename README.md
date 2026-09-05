@@ -112,6 +112,8 @@ The two assays used so far:
 - `milk-clotting assay` — measures functional chymosin by testing how well the culture liquid clots milk.
 - `lysozyme activity assay` — measures functional lysozyme by testing how well the culture liquid breaks down bacterial cells.
 
+Both are activity assays, so a yield in `mg/L` is derived from measured activity rather than weighed directly. `JIN2007` assayed lysozyme activity against *M. lysodeikticus* and converted to `mg/L` using the specific activity of authentic human lysozyme (100,000 U/mg). Conversion details belong here, not repeated in every row's `assay` value.
+
 ### Scope rule: outcomes vs. experiment notes
 
 `outcomes.csv` holds **paired measurements**: a value produced by a named strain, with a control to compare against. Yield, activity, spore counts, and other quantified results belong here.
