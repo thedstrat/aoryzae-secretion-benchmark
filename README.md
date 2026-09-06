@@ -46,7 +46,7 @@ One row per experiment, using the grain defined below.
 | `cargo` | The protein the fungus was engineered to produce and secrete ("cargo" is standard usage for anything moved through the secretory pathway). |
 | `construct` | The DNA design used to express the cargo — promoter, carrier fusion, cleavage site, terminator, marker. |
 | `conditions` | Culture setup as one readable string; format defined below. |
-| `notes` | Evidence explaining why an effect occurred, or supporting the interpretation of an outcome — see the scope rule below. Caveats a reader needs in order to interpret the numbers correctly. Not a summary of the paper — if a fact is already captured by another column, or would not change how someone reads the result, it does not go here. |
+| `notes` | Two things: caveats a reader needs to interpret the numbers correctly, and any reported effect on the organism itself (growth, spore formation, shape). The second matters because an intervention that raises yield while harming the organism is not a free win. |
 
 ### `experiment_genes.csv`
 
@@ -118,11 +118,11 @@ Both are activity assays, so a yield in `mg/L` is derived from measured activity
 
 `outcomes.csv` holds **paired measurements**: a value produced by a named strain, with a control to compare against. Yield, activity, spore counts, and other quantified results belong here.
 
-Unquantified observations are not recorded at all. "Grew normally", "impaired sporulation with no counts given", and similar statements have no value, no unit, and no control measurement, so they earn no row here — and because they do not change how any number reads, they do not go in an experiment's `notes` either. This is a deliberate scope decision, not an oversight: the dataset holds measured outcomes and the caveats needed to read them correctly, and nothing else. Earlier versions of the notes did carry such observations; they were removed.
+Unquantified observations form no rows. "Grew normally", "impaired sporulation with no counts given", and similar statements have no value, no unit, and no control measurement, so there is nothing to put in a row. Where such an observation reports an effect on the organism itself, it goes in the relevant experiment's `notes` instead.
 
 The test is whether the paper measured something against a control, not whether the finding matters.
 
-An **experiment note** (the `notes` column in `experiments.csv`) covers what a reader needs in order to interpret those numbers correctly: what a value can and cannot be compared against, unverified aspects of the strain or construct, inconsistencies in the source paper, and evidence bearing on how an outcome should be read — an enzyme activity assay that explains why a yield rose or fell, for instance. Evidence that would not change how someone reads a number, and facts already carried by another column, stay out.
+An **experiment note** (the `notes` column in `experiments.csv`) covers two things. The first is what a reader needs in order to interpret those numbers correctly: what a value can and cannot be compared against, unverified aspects of the strain or construct, inconsistencies in the source paper, and evidence bearing on how an outcome should be read — an enzyme activity assay that explains why a yield rose or fell, for instance. The second is any reported effect on the organism itself — growth, spore formation, shape — whether or not the paper attached a number to it. Facts already carried by another column stay out, and so does general background such as replication counts.
 
 Among rows that do qualify for `outcomes.csv`, there is no separate column distinguishing benchmarkable outcomes from side effects. `measured_what` already does that: a computational user filters to the metrics their model predicts, while a human reads the full set and sees both what an edit gained and what it cost.
 
@@ -173,13 +173,14 @@ A row is a measurement with something to compare it against: a number from a nam
 
 ### What earns a place in the experiment's notes
 
-The `notes` field on the experiment holds caveats a reader needs in order to interpret the numbers correctly. A note earns its place only if someone would misread the outcome rows without it:
+The `notes` field on the experiment holds two kinds of thing: caveats a reader needs in order to interpret the numbers correctly, and any reported effect on the organism itself.
 
 - **What a value can be compared against** — an unverified cargo copy number, or a control strain carrying none of the deletions the fold-change is being credited to.
 - **Problems in the source** — a figure that names its own control strain two different ways.
 - **Evidence that changes how an outcome reads** — a protease assay explaining why a yield fell after day 5, or a condition under which a negative result does not hold.
+- **Effects on the organism** — growth, spore formation, shape, whether or not the paper quantified them. "Grew normally" belongs here. An intervention that raises yield while harming the organism is not a free win, so a reader needs to see the cost next to the gain.
 
-Nothing else goes here. Facts already carried by another column are cut, and so is general background: replication counts, and observations with no number attached such as "grew normally". Those observations are not recorded anywhere in the dataset — a deliberate scope decision, not an oversight. See the scope rule above.
+Facts already carried by another column stay out, and so does general background such as replication counts. See the scope rule above.
 
 ### Results the paper reports but published elsewhere
 
