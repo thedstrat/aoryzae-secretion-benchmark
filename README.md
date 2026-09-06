@@ -46,7 +46,7 @@ One row per experiment, using the grain defined below.
 | `cargo` | The protein the fungus was engineered to produce and secrete ("cargo" is standard usage for anything moved through the secretory pathway). |
 | `construct` | The DNA design used to express the cargo — promoter, carrier fusion, cleavage site, terminator, marker. |
 | `conditions` | Culture setup as one readable string; format defined below. |
-| `notes` | Evidence explaining why an effect occurred, or supporting the interpretation of an outcome — see the scope rule below. |
+| `notes` | Evidence explaining why an effect occurred, or supporting the interpretation of an outcome — see the scope rule below. Caveats a reader needs in order to interpret the numbers correctly. Not a summary of the paper — if a fact is already captured by another column, or would not change how someone reads the result, it does not go here. |
 
 ### `experiment_genes.csv`
 
