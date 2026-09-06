@@ -118,11 +118,11 @@ Both are activity assays, so a yield in `mg/L` is derived from measured activity
 
 `outcomes.csv` holds **paired measurements**: a value produced by a named strain, with a control to compare against. Yield, activity, spore counts, and other quantified results belong here.
 
-Unquantified observations go in the relevant experiment's `notes`. "Grew normally", "impaired sporulation with no counts given", and similar statements are real findings but have no value, no unit, and no control measurement, so they do not form rows.
+Unquantified observations are not recorded at all. "Grew normally", "impaired sporulation with no counts given", and similar statements have no value, no unit, and no control measurement, so they earn no row here — and because they do not change how any number reads, they do not go in an experiment's `notes` either. This is a deliberate scope decision, not an oversight: the dataset holds measured outcomes and the caveats needed to read them correctly, and nothing else. Earlier versions of the notes did carry such observations; they were removed.
 
 The test is whether the paper measured something against a control, not whether the finding matters.
 
-An **experiment note** (the `notes` column in `experiments.csv`) also covers evidence explaining *why* an effect occurred, or supporting the interpretation of an outcome — enzyme activity assays, protein localization, Western blots confirming identity, or the gene-expression rationale for why a gene was chosen.
+An **experiment note** (the `notes` column in `experiments.csv`) covers what a reader needs in order to interpret those numbers correctly: what a value can and cannot be compared against, unverified aspects of the strain or construct, inconsistencies in the source paper, and evidence bearing on how an outcome should be read — an enzyme activity assay that explains why a yield rose or fell, for instance. Evidence that would not change how someone reads a number, and facts already carried by another column, stay out.
 
 Among rows that do qualify for `outcomes.csv`, there is no separate column distinguishing benchmarkable outcomes from side effects. `measured_what` already does that: a computational user filters to the metrics their model predicts, while a human reads the full set and sees both what an edit gained and what it cost.
 
@@ -171,14 +171,15 @@ Building the same strain twice is not a second experiment. If a paper made two i
 
 A row is a measurement with something to compare it against: a number from a named strain, and a control that number can be read against. No number, or nothing to read it against, means no row.
 
-### Everything else goes in the experiment's notes
+### What earns a place in the experiment's notes
 
-The `notes` field on the experiment holds the rest. That covers two kinds of thing:
+The `notes` field on the experiment holds caveats a reader needs in order to interpret the numbers correctly. A note earns its place only if someone would misread the outcome rows without it:
 
-- **Evidence about why something worked** — protease assays, protein localization, Western blots confirming a protein is what the authors say it is.
-- **Observations with no number attached** — "grew normally", or impaired sporulation with no counts given.
+- **What a value can be compared against** — an unverified cargo copy number, or a control strain carrying none of the deletions the fold-change is being credited to.
+- **Problems in the source** — a figure that names its own control strain two different ways.
+- **Evidence that changes how an outcome reads** — a protease assay explaining why a yield fell after day 5, or a condition under which a negative result does not hold.
 
-These are real findings. They are just not measurements against a control, so they do not become rows.
+Nothing else goes here. Facts already carried by another column are cut, and so is general background: replication counts, and observations with no number attached such as "grew normally". Those observations are not recorded anywhere in the dataset — a deliberate scope decision, not an oversight. See the scope rule above.
 
 ### Results the paper reports but published elsewhere
 
