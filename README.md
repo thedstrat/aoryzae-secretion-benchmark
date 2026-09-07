@@ -141,6 +141,10 @@ One experiment is one intervention × cargo × control × culture condition. Ind
 | `experiment_id` | `{study_id}_{SHORTLABEL}` | `ZHU2012_CHY` |
 | `outcome_id` | `{study_id}_{3-digit sequence}` | `ZHU2012_001` |
 
+`SHORTLABEL` names whatever distinguishes the experiments within one study, so it varies by study rather than drawing on a fixed vocabulary. `ZHU2012` and `YOON2010` each test one gene against two cargoes, so the label is the cargo (`ZHU2012_CHY`, `ZHU2012_HLY`). `JIN2007` tests one cargo against several genes, so the label is the gene (`JIN2007_PEPA`), with both genes joined for a double disruptant (`JIN2007_TPPA_PEPE`). `YOON2013` varies gene and intervention together — four of its genes are both disrupted and placed under a repressible promoter — so the gene alone is not unique and the label carries both (`YOON2013_AOATG1_DEL`, `YOON2013_AOATG1_REPRESS`).
+
+A label is therefore only meaningful within its own study. Like `outcome_id`, an `experiment_id` is a key rather than a description; `experiments.csv` holds the authoritative account of what an experiment is.
+
 `outcome_id` is deliberately sequential and meaningless — meaning lives in `strain` and `measured_what`, which can be corrected without invalidating an ID.
 
 When two studies share first author and year, append a short distinguishing suffix to `study_id`, e.g. `NEMOTO2009RNAI` vs. `NEMOTO2009AUT` — two different 2009 papers by the same first author.
