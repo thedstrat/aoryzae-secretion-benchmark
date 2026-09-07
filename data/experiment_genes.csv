@@ -12,3 +12,12 @@ JIN2007_TPPA_PEPE,AO090011000235,tppA,remove_protease,disruption,ΔtppA::argB
 JIN2007_TPPA_PEPE,AO090003000693,pepE,remove_protease,disruption,ΔpepE::adeA
 JIN2007_TPPA_PALB,AO090011000235,tppA,remove_protease,disruption,ΔtppA::argB
 JIN2007_TPPA_PALB,AO090005000756,palB,target_regulator,disruption,ΔpalB::adeA
+YOON2013_ATG1_DEL,TODO,Aoatg1,block_autophagy,disruption,ΔAoatg1::adeA
+YOON2013_ATG4_DEL,TODO,Aoatg4,block_autophagy,disruption,ΔAoatg4::adeA
+YOON2013_ATG8_DEL,TODO,Aoatg8,block_autophagy,disruption,ΔAoatg8::adeA
+YOON2013_ATG13_DEL,TODO,Aoatg13,block_autophagy,disruption,ΔAoatg13::adeA
+YOON2013_ATG15_DEL,TODO,Aoatg15,block_autophagy,disruption,ΔAoatg15::adeA
+YOON2013_ATG1_REPRESS,TODO,Aoatg1,block_autophagy,promoter_replacement,PAoatg1::pyrG-PthiA::Aoatg1
+YOON2013_ATG4_REPRESS,TODO,Aoatg4,block_autophagy,promoter_replacement,PAoatg4::pyrG-PthiA::Aoatg4
+YOON2013_ATG8_REPRESS,TODO,Aoatg8,block_autophagy,promoter_replacement,PAoatg8::pyrG-PthiA::Aoatg8
+YOON2013_ATG15_REPRESS,TODO,Aoatg15,block_autophagy,promoter_replacement,PAoatg15::pyrG-PthiA::Aoatg15

@@ -58,7 +58,7 @@ One row per gene edit in an experiment; an experiment with several edited genes 
 | `gene_id` | Stable identifier for the edited gene. |
 | `gene_name` | Readable name or symbol for the edited gene. |
 | `gene_role` | Why the researchers touched this gene — the strategy the edit belongs to. Values below. |
-| `edit_type` | The kind of edit, using the paper's own term. Values so far: `disruption`. Others (`deletion`, `knockdown`, `overexpression`) will be added as papers require them. |
+| `edit_type` | The kind of edit, using the paper's own term. Values so far: `disruption`, `promoter_replacement` — the gene is left intact but its native promoter is swapped for another, so expression can be controlled rather than removed. Others (`deletion`, `knockdown`, `overexpression`) will be added as papers require them. |
 | `edit_notation` | The genetic change written exactly as the paper reported it, e.g. `ΔAosedD::pyrG`. |
 
 The `gene_role` values:
@@ -67,12 +67,15 @@ The `gene_role` values:
 | --- | --- |
 | `remove_protease` | Delete enzymes that chew up the product. |
 | `fix_misrouting` | Stop the product being sent to the vacuole for disposal. |
+| `block_autophagy` | Shut down autophagy, the cell's bulk recycling route, which delivers misfolded secretory proteins from the ER to the vacuole for destruction. |
 | `reduce_competition` | Make less of the fungus's own secreted protein, so more capacity is free for the product. |
 | `improve_folding` | Help the cell fold the extra protein correctly, or handle the stress when it can't. |
 | `change_shape` | Alter hyphal shape, branching, cell wall, or broth thickness. |
 | `target_regulator` | Hit one controller gene that turns many genes up or down at once, instead of editing them individually. |
 | `design_the_construct` | Change how the product gene is expressed — promoter, signal peptide, carrier fusion, insertion site — rather than editing a host gene. |
 | `unknown` | Found by screening or mutagenesis; the mechanism is not established. |
+
+`block_autophagy` is distinct from `fix_misrouting`: that value covers receptor-mediated sorting of correctly folded cargo, while this one covers bulk degradation of protein the cell has judged defective. Different mechanism, different genes, different tradeoffs — losing autophagy impairs conidiation.
 
 `gene_role` is the one field in this dataset that is our judgment rather than a transcription from the paper. The papers do not label their work this way. The categories exist so the dataset can be grouped by what kind of thing was tried, which is what makes it possible to see what the field has and has not attempted.
 
