@@ -28,8 +28,8 @@ YOON2013_003,YOON2013_AOATG4_DEL,SKu70-ΔAoatg4-AKC1,modified,TODO,mg/L,Highest 
 YOON2013_004,YOON2013_AOATG8_DEL,ΔAoatg8-AKC1,modified,TODO,mg/L,Highest secreted CHY yield reported,2.5x,4,milk-clotting assay,Fig. 2,
 YOON2013_005,YOON2013_AOATG13_DEL,SKu70-ΔAoatg13-AKC1,modified,TODO,mg/L,Highest secreted CHY yield reported,1.4x,4,milk-clotting assay,Fig. 2,
 YOON2013_006,YOON2013_AOATG15_DEL,SKu70-ΔAoatg15-AKC2,modified,TODO,mg/L,Highest secreted CHY yield reported,TODO,4,milk-clotting assay,Fig. 2,Paper reports no significant increase; no value given.
-YOON2013_007,YOON2013_AOATG1_REPRESS,SlD-AKC1,control,TODO,mg/L,Secreted CHY production at day 4,1.0x,4,milk-clotting assay,Fig. 4A,
-YOON2013_008,YOON2013_AOATG1_REPRESS,SlD-PtA1-AKC,modified,TODO,mg/L,Secreted CHY production at day 4,1.7x,4,milk-clotting assay,Fig. 4A,
-YOON2013_009,YOON2013_AOATG4_REPRESS,SlD-PtA4-AKC,modified,TODO,mg/L,Secreted CHY production at day 4,1.7x,4,milk-clotting assay,Fig. 4A,
-YOON2013_010,YOON2013_AOATG8_REPRESS,SlD-PtA8-AKC,modified,TODO,mg/L,Secreted CHY production at day 4,2.4x,4,milk-clotting assay,Fig. 4A,
-YOON2013_011,YOON2013_AOATG15_REPRESS,SlD-PtA15-AKC,modified,TODO,mg/L,Secreted CHY production at day 4,1.6x,4,milk-clotting assay,Fig. 4A,
+YOON2013_007,YOON2013_AOATG1_PTHIA,SlD-AKC1,control,TODO,mg/L,Secreted CHY production at day 4,1.0x,4,milk-clotting assay,Fig. 4A,
+YOON2013_008,YOON2013_AOATG1_PTHIA,SlD-PtA1-AKC,modified,TODO,mg/L,Secreted CHY production at day 4,1.7x,4,milk-clotting assay,Fig. 4A,
+YOON2013_009,YOON2013_AOATG4_PTHIA,SlD-PtA4-AKC,modified,TODO,mg/L,Secreted CHY production at day 4,1.7x,4,milk-clotting assay,Fig. 4A,
+YOON2013_010,YOON2013_AOATG8_PTHIA,SlD-PtA8-AKC,modified,TODO,mg/L,Secreted CHY production at day 4,2.4x,4,milk-clotting assay,Fig. 4A,
+YOON2013_011,YOON2013_AOATG15_PTHIA,SlD-PtA15-AKC,modified,TODO,mg/L,Secreted CHY production at day 4,1.6x,4,milk-clotting assay,Fig. 4A,
