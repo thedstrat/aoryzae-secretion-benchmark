@@ -4,24 +4,24 @@
 
 A curated dataset of published *Aspergillus oryzae* secretion-engineering experiments, pairing genetic interventions with measured protein-production outcomes for benchmarking secretion-aware and strain-engineering models.
 
-## What this is, for anyone arriving cold
+## Background
 
-*Aspergillus oryzae* is a filamentous fungus, the mold used for centuries to make sake, soy sauce, and miso. Industrially it matters because it is very good at **secretion**: pushing proteins it makes out through its cell wall into the surrounding liquid, where they can simply be collected. That makes it a host for producing useful proteins (enzymes, or a drug protein) by inserting the gene for a foreign protein and letting the fungus manufacture and export it.
+*Aspergillus oryzae* is a filamentous fungus, long used to make sake, soy sauce, and miso. It is an industrial host for protein production because it secretes efficiently, exporting proteins through its cell wall into the culture liquid where they can be recovered. Inserting the gene for a foreign protein makes the fungus manufacture and export it.
 
-The catch is that the fungus is good at secreting *its own* proteins, not yours. A foreign protein moving through the secretory pathway can be chewed up by the fungus's proteases, misrouted to the vacuole (the cell's waste compartment) and destroyed, or stall because the cell cannot fold that much of it correctly. So researchers **engineer the host**: delete a protease, shut off a disposal route, alter how the product gene is expressed, then measure whether more protein comes out.
+The difficulty is that the pathway is tuned for the fungus's own proteins. A foreign protein can be degraded by native proteases, misrouted to the vacuole for disposal, or limited by the cell's capacity to fold it. Host engineering addresses this: delete a protease, shut off a degradation route, change how the product gene is expressed, then measure the effect on yield.
 
-This dataset collects those experiments from the published literature. Each one pairs a genetic change with the production number it produced, and with the unmodified strain that number should be compared against. Two things make it usable as a benchmark: every number is traceable to the exact figure or table it came from, and the costs are recorded alongside the gains, because an edit that doubles yield while crippling the fungus is not a win.
+This dataset collects those experiments from the literature, pairing each genetic change with its measured production outcome and the control strain that outcome should be read against. Every value is traceable to the figure or table it came from, and effects on the organism are recorded alongside yield, since an edit that raises production while impairing growth or sporulation carries a real cost.
 
-A few terms used throughout:
+### Terminology
 
-- **Cargo**: the protein you are trying to produce and secrete. Standard usage for anything moved through the secretory pathway. Chymosin (the milk-clotting enzyme in cheesemaking) and human lysozyme are the cargoes here.
-- **Strain**: one specific fungal line with a specific set of genetic changes, with a name given by the lab that built it (`SlD-AKC1`).
-- **Control strain**: the comparison strain, carrying the cargo but not the genetic change being tested. Without it a production number means nothing.
-- **Disruption / deletion**: breaking a gene so it no longer works.
-- **Promoter**: the DNA switch in front of a gene that controls when and how much it is expressed. Swapping in a different promoter leaves the gene intact but puts it under new control, which is how researchers turn a gene down without removing it.
-- **Conidia**: the fungus's spores. They matter commercially because they are how a large culture is inoculated, so an edit that ruins spore formation is expensive even if yield rises.
+- **Cargo**: the protein being produced and secreted. Standard usage for anything moved through the secretory pathway. The cargoes here are chymosin (the milk-clotting enzyme used in cheesemaking) and human lysozyme.
+- **Strain**: a specific fungal line carrying a specific set of genetic changes, named by the lab that built it (`SlD-AKC1`).
+- **Control strain**: the reference strain, carrying the cargo but not the genetic change under test.
+- **Disruption / deletion**: breaking a gene so it no longer functions.
+- **Promoter**: the regulatory DNA in front of a gene controlling when and how much it is expressed. Replacing a promoter leaves the gene intact but under different control, which is how expression is reduced rather than removed.
+- **Conidia**: the fungus's spores, and how large cultures are inoculated, so impaired conidiation is an industrial cost.
 
-### How the four tables fit together
+### Table structure
 
 ```
 studies.csv          one row per published paper
@@ -35,14 +35,6 @@ outcomes.csv         the measured numbers, one row per measurement
 ```
 
 Everything joins on IDs: an `experiments.csv` row names its `study_id`, and rows in `experiment_genes.csv` and `outcomes.csv` name their `experiment_id`. One experiment usually has several outcome rows: at minimum the modified strain and its control, sometimes more strains or more things measured.
-
-## Citation
-
-If you use this dataset, please cite it:
-
-> Delistraty, J. (2026). A. oryzae secretion-engineering benchmark (v0.2.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.22288125
-
-Please also cite the original papers the data comes from. They are listed with DOIs in `data/studies.csv`.
 
 ## What's in data/
 
@@ -76,7 +68,7 @@ One row per experiment, where an experiment is **one intervention Ã— one cargo Ã
 | `edited_parent_strain` | The strain that the modified production strain was built directly from. Strains are constructed in lineages, each edit made on top of an earlier strain, so this records the immediate predecessor rather than the original wild isolate. |
 | `control_strain` | The strain the modified one was measured against. |
 | `cargo` | The protein the fungus was engineered to produce and secrete ("cargo" is standard usage for anything moved through the secretory pathway). |
-| `construct` | The DNA design used to express the cargo, written as the paper writes it. It names the parts stitched together: the promoter driving expression, any carrier protein the cargo is fused to (a trick that improves secretion), the cleavage site where the cargo is cut free from that carrier, the terminator ending transcription, and the marker used to select successful transformants. Typically identical across every experiment in one study, since only the host genes are varied. |
+| `construct` | The DNA design used to express the cargo, written as the paper writes it: the promoter, any carrier protein the cargo is fused to, the cleavage site, the terminator, and the selection marker. |
 | `conditions` | How the fungus was grown, one string in fixed order: medium, starting pH (with the pH it drifted to, if reported), volume, temperature, inoculum, duration. Production numbers only compare between strains grown the same way. `5x DPY, pH 5.5 (5.3 by d4), 20 mL, 30C, 2e5 conidia, 3-6 d` reads as: five-times-strength DPY broth, pH 5.5 falling to 5.3 by day 4, 20 mL, 30 degrees C, inoculated with 200,000 spores, sampled days 3-6. |
 | `notes` | Two things: caveats a reader needs to interpret the numbers correctly, and any reported effect on the organism itself (growth, spore formation, shape). The second matters because an intervention that raises yield while harming the organism is not a free win. |
 
@@ -109,8 +101,6 @@ The `gene_role` values:
 
 `gene_role` is the only field here that is our judgment rather than a transcription. The papers do not label their work this way. It exists so the dataset can be grouped by what kind of thing was tried, showing what the field has and has not attempted. Ignore the column if you disagree with a call; nothing else depends on it.
 
-Where categories overlap, classify by what was changed, not the downstream effect: deleting a regulator that controls many protease genes is `target_regulator`, not `remove_protease`. New values get added as papers require them.
-
 ### `outcomes.csv`
 
 One row per measured result for one experimental arm or strain.
@@ -134,11 +124,7 @@ Reading one row: `78.0 | mg/L | Highest secreted CHY yield reported | 2.9x` mean
 
 One row = one measurement. A strain with both a yield and a growth measurement gets two rows, distinguished by `measured_what`, never one row holding two values. No column flags which rows are "the result" and which are side effects; `measured_what` already says what each measured.
 
-In any cell, across all four files: `TODO` means not yet checked against the paper, `not_reported` means checked and the paper does not give it, and blank means the field does not apply.
-
-Strain names repeat across studies from the same lab (`SlD-AKC1` appears in both `ZHU2012` and `YOON2010` with different values), so group by `experiment_id`, never by `strain` alone.
-
-Both assays so far (`milk-clotting assay` for chymosin, `lysozyme activity assay` for lysozyme) measure what the protein *does* and convert that to a concentration. Activity counts only protein that folded correctly, so a `mg/L` from activity is not interchangeable with one measured by mass, so check `assay` before comparing across studies. (`JIN2007` converted using the activity of pure human lysozyme, 100,000 U/mg.)
+Both assays so far (`milk-clotting assay` for chymosin, `lysozyme activity assay` for lysozyme) measure what the protein *does* and convert that to a concentration. Activity counts only protein that folded correctly, so a `mg/L` from activity is not interchangeable with one measured by mass. Check `assay` before comparing across studies. (`JIN2007` converted using the activity of pure human lysozyme, 100,000 U/mg.)
 
 ### IDs
 
@@ -152,6 +138,10 @@ IDs are lookup keys, not descriptions. `experiments.csv` holds the real account 
 
 Two studies sharing first author and year get a suffix (`NEMOTO2009RNAI` vs. `NEMOTO2009AUT`). A `study_id` may be a placeholder until the citation is confirmed; renaming one means updating every dependent row in the other three files.
 
+## Exploring the data
+
+`notebooks/explore.ipynb` is a read-only tour of the four tables: what the field has tried, whether a gene has been knocked out before, experiments that changed more than one gene, and effect sizes by strategy. It also spells out what the dataset cannot answer yet. Needs pandas.
+
 ## Adding a paper
 
 - **Record what is on the page**, not what the authors seem to mean. If a paper contradicts itself, record both versions and note the conflict rather than picking one.
@@ -159,10 +149,6 @@ Two studies sharing first author and year get a suffix (`NEMOTO2009RNAI` vs. `NE
 - **A row needs something to compare against.** A number from a named strain plus a control to read it against. Unquantified observations ("grew normally", sporulation with no counts) have no value, unit, or control, so they form no row. If they report an effect on the organism, they go in the experiment's `notes`. The test is whether the paper measured against a control, not whether the finding matters.
 - **`notes` holds two things:** what a reader needs to interpret the numbers (what a value can and cannot be compared against, unverified strain or construct details, contradictions in the source, evidence bearing on why a yield moved) and any reported effect on the organism, quantified or not. Facts already in another column stay out.
 - **Results the paper cites from elsewhere** get no row. Curate from the original paper or skip it.
-
-## Exploring the data
-
-`notebooks/explore.ipynb` is a read-only tour of the four tables: what the field has tried, whether a gene has been knocked out before, experiments that changed more than one gene, and effect sizes by strategy. It also spells out what the dataset cannot answer yet. Needs pandas.
 
 ## Validating the data
 
@@ -172,6 +158,14 @@ Two studies sharing first author and year get a suffix (`NEMOTO2009RNAI` vs. `NE
 - references between files point at rows that exist
 - `source_ref` and `arm` are filled in on every outcome row
 - every experiment has at least one gene row and one outcome row
+
+## Citation
+
+If you use this dataset, please cite it:
+
+> Delistraty, J. (2026). A. oryzae secretion-engineering benchmark (v0.2.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.22288125
+
+Please also cite the original papers the data comes from. They are listed with DOIs in `data/studies.csv`.
 
 ## License
 
