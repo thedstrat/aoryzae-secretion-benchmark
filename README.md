@@ -15,17 +15,13 @@ This dataset collects those experiments from the literature, pairing each geneti
 ### Table structure
 
 ```
-studies.csv          one row per published paper
-    |
-experiments.csv      one row per experiment in that paper
-    |        |         (one gene change x one cargo x one control x one growth condition)
-    |        |
-    |   experiment_genes.csv   which gene(s) that experiment changed, and how
-    |
-outcomes.csv         the measured numbers, one row per measurement
+studies.csv                 one row per published paper
+└── experiments.csv         one row per experiment in that paper
+    ├── experiment_genes.csv    which genes it changed, and how
+    └── outcomes.csv            one row per measurement
 ```
 
-Everything joins on IDs: an `experiments.csv` row names its `study_id`, and rows in `experiment_genes.csv` and `outcomes.csv` name their `experiment_id`. One experiment usually has several outcome rows: at minimum the modified strain and its control, sometimes more strains or more things measured.
+Each level joins to the one above it by ID: an experiment names its `study_id`, and gene and outcome rows name their `experiment_id`.
 
 ## What's in data/
 
@@ -44,13 +40,13 @@ One row per published paper.
 | `journal` | Journal that published the paper. |
 | `doi` | Digital Object Identifier for the paper. |
 | `pmid` | PubMed identifier for the paper. |
-| `pdf_url` | Direct link to the article PDF when a stable official publisher or repository link is available. This is a convenience field; `doi` remains the canonical reference. May be blank or require publisher access. |
-
-Only official publisher or repository links (e.g. the publisher's own site, PMC, J-STAGE) belong in `pdf_url`. Unofficial mirrors such as ResearchGate or Sci-Hub, and local file paths, are not used.
+| `pdf_url` | Direct link to the article PDF, where a stable official publisher or repository link exists. |
 
 ### `experiments.csv`
 
-One row per experiment, where an experiment is **one intervention × one cargo × one control × one growth condition**. Change any of the four and it is a different experiment. Building the same strain twice is not a second experiment: labs often make several independent transformants of the identical edit to check the result is not an artifact of where the DNA landed, and those are extra rows in `outcomes.csv`, told apart by `strain`.
+One row per experiment. An experiment is one comparison: a genetic change, tested with one cargo, against one control strain, under one set of growth conditions. Change any of those four and it is a separate experiment.
+
+Repeating the same comparison is not. Labs usually build several strains carrying the identical edit and measure each, to confirm a result is not an accident of where the DNA inserted. Those are multiple rows in `outcomes.csv` under one experiment, told apart by `strain`.
 
 | Column | Meaning |
 | --- | --- |
@@ -131,14 +127,16 @@ Both assays so far (`milk-clotting assay` for chymosin, `lysozyme activity assay
 
 IDs are lookup keys, not descriptions, so do not try to read an experiment's design off its ID. `experiments.csv` is the authoritative record of what was done.
 
-`SHORTLABEL` is the part after the study, and each study picks it from whatever that study varied. That means the same position carries a different kind of thing in different studies:
+`SHORTLABEL` is the part after the study, and each study picks it from whatever it varied, so the same position holds a different kind of thing from study to study:
 
 | Example | The label names | Because that study varied |
 | --- | --- | --- |
 | `ZHU2012_CHY` | the cargo (chymosin) | one gene, two cargoes |
 | `JIN2007_PEPA` | the gene (`pepA`) | one cargo, several genes |
 | `JIN2007_TPPA_PEPE` | both genes, joined | two genes disrupted in one strain |
-| `YOON2013_AOATG1_DELETED` | the gene and the edit type | the same four genes both deleted and made switchable |
+| `YOON2013_AOATG1_DELETED` | the gene and the edit | four genes, each edited two ways |
+
+`YOON2013` needs both halves because it tested every gene twice. `_DELETED` is the gene removed outright. `_REPRESSIBLE` leaves the gene in place but swaps its promoter for one that shuts off when thiamine is added, so expression can be turned down instead of eliminated. The authors did this because deleting these genes raised chymosin yield but severely impaired spore formation; the switchable version was built to recover sporulation, which it did for some of the four genes better than others.
 
 ## Ingestion notes
 
