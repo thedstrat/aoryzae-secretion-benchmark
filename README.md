@@ -10,16 +10,7 @@ A curated dataset of published *Aspergillus oryzae* secretion-engineering experi
 
 The difficulty is that the pathway is tuned for the fungus's own proteins. A foreign protein can be degraded by native proteases, misrouted to the vacuole for disposal, or limited by the cell's capacity to fold it. Host engineering addresses this: delete a protease, shut off a degradation route, change how the product gene is expressed, then measure the effect on yield.
 
-This dataset collects those experiments from the literature, pairing each genetic change with its measured production outcome and the control strain that outcome should be read against. Every value is traceable to the figure or table it came from, and effects on the organism are recorded alongside yield, since an edit that raises production while impairing growth or sporulation carries a real cost.
-
-### Terminology
-
-- **Cargo**: the protein being produced and secreted. Standard usage for anything moved through the secretory pathway. The cargoes here are chymosin (the milk-clotting enzyme used in cheesemaking) and human lysozyme.
-- **Strain**: a specific fungal line carrying a specific set of genetic changes, named by the lab that built it (`SlD-AKC1`).
-- **Control strain**: the reference strain, carrying the cargo but not the genetic change under test.
-- **Disruption / deletion**: breaking a gene so it no longer functions.
-- **Promoter**: the regulatory DNA in front of a gene controlling when and how much it is expressed. Replacing a promoter leaves the gene intact but under different control, which is how expression is reduced rather than removed.
-- **Conidia**: the fungus's spores, and how large cultures are inoculated, so impaired conidiation is an industrial cost.
+This dataset collects those experiments from the literature, pairing each genetic change with its measured production outcome and the control strain that outcome should be read against. The protein being produced is referred to throughout as the **cargo**, standard usage for anything moved through the secretory pathway; the cargoes here are chymosin and human lysozyme. Every value is traceable to the figure or table it came from, and effects on the organism are recorded alongside yield, since an edit that raises production while impairing growth or sporulation carries a real cost.
 
 ### Table structure
 
@@ -72,6 +63,8 @@ One row per experiment, where an experiment is **one intervention × one cargo �
 | `conditions` | How the fungus was grown, one string in fixed order: medium, starting pH (with the pH it drifted to, if reported), volume, temperature, inoculum, duration. Production numbers only compare between strains grown the same way. `5x DPY, pH 5.5 (5.3 by d4), 20 mL, 30C, 2e5 conidia, 3-6 d` reads as: five-times-strength DPY broth, pH 5.5 falling to 5.3 by day 4, 20 mL, 30 degrees C, inoculated with 200,000 spores, sampled days 3-6. |
 | `notes` | Two things: caveats a reader needs to interpret the numbers correctly, and any reported effect on the organism itself (growth, spore formation, shape). The second matters because an intervention that raises yield while harming the organism is not a free win. |
 
+Reading one row: `JIN2007_TPPA_PEPE` expressed human lysozyme in strain `NA-2L-peE10`, measured against control `N-2L`. Both strains carry the same cargo construct and were grown the same way, so the difference between them is attributable to the gene edits, which are listed in `experiment_genes.csv`.
+
 ### `experiment_genes.csv`
 
 One row per gene edit in an experiment; an experiment with several edited genes has several rows.
@@ -98,6 +91,8 @@ The `gene_role` values:
 | `target_regulator` | Hit one controller gene that turns many genes up or down at once, instead of editing them individually. |
 | `design_the_construct` | Change how the product gene is expressed (promoter, signal peptide, carrier fusion, insertion site) rather than editing a host gene. |
 | `unknown` | Found by screening or mutagenesis; the mechanism is not established. |
+
+Reading one row: `JIN2007_TPPA_PEPE | AO090011000235 | tppA | remove_protease | disruption | ΔtppA::argB` says that experiment broke the protease gene `tppA`, replacing it with the `argB` marker. That experiment has a second row for `pepE`, because both genes were disrupted in the same strain and measured together.
 
 `gene_role` is the only field here that is our judgment rather than a transcription. The papers do not label their work this way. It exists so the dataset can be grouped by what kind of thing was tried, showing what the field has and has not attempted. Ignore the column if you disagree with a call; nothing else depends on it.
 
@@ -134,21 +129,30 @@ Both assays so far (`milk-clotting assay` for chymosin, `lysozyme activity assay
 | `experiment_id` | `{study_id}_{SHORTLABEL}` | `ZHU2012_CHY` |
 | `outcome_id` | `{study_id}_{3-digit sequence}` | `ZHU2012_001` |
 
-IDs are lookup keys, not descriptions. `experiments.csv` holds the real account of what an experiment was. `SHORTLABEL` names whatever a given study varies, so it means nothing outside that study: the cargo in `ZHU2012_CHY`, the gene in `JIN2007_PEPA` (both genes joined for a double knockout, `JIN2007_TPPA_PEPE`), and gene plus edit type in `YOON2013`, which tests four genes both deleted and switchable (`YOON2013_AOATG1_DELETED`, `YOON2013_AOATG1_REPRESSIBLE`).
+IDs are lookup keys, not descriptions, so do not try to read an experiment's design off its ID. `experiments.csv` is the authoritative record of what was done.
 
-Two studies sharing first author and year get a suffix (`NEMOTO2009RNAI` vs. `NEMOTO2009AUT`). A `study_id` may be a placeholder until the citation is confirmed; renaming one means updating every dependent row in the other three files.
+`SHORTLABEL` is the part after the study, and each study picks it from whatever that study varied. That means the same position carries a different kind of thing in different studies:
 
-## Exploring the data
+| Example | The label names | Because that study varied |
+| --- | --- | --- |
+| `ZHU2012_CHY` | the cargo (chymosin) | one gene, two cargoes |
+| `JIN2007_PEPA` | the gene (`pepA`) | one cargo, several genes |
+| `JIN2007_TPPA_PEPE` | both genes, joined | two genes disrupted in one strain |
+| `YOON2013_AOATG1_DELETED` | the gene and the edit type | the same four genes both deleted and made switchable |
+
+## Ingestion notes
+
+The rules followed when curating a paper into these tables. They are worth reading before using the data, since they determine what is present and what is deliberately absent.
+
+- **Record what the paper says**, not what the authors appear to mean. Where a paper contradicts itself, both versions are recorded and the conflict noted rather than resolved by guesswork.
+- **Every number cites its source.** Each outcome row names the figure, table, or section it came from, so any value can be checked against the paper.
+- **A measurement needs a comparison to earn a row.** A number from a named strain, plus a control to read it against. Statements with no number ("grew normally", impaired sporulation with no counts) cannot form a row, so where they describe an effect on the organism they go in the experiment's `notes` instead. The test is whether the paper measured against a control, not whether the finding is interesting.
+- **`notes` carries the caveats.** What a value can and cannot be compared against, unverified strain or construct details, contradictions in the source, evidence explaining why a yield moved, and any reported effect on the organism. Facts already held in another column are not repeated here.
+- **Results a paper cites from elsewhere get no row.** They are curated from the original publication or skipped, so that every value traces to the paper that reported it.
+
+## Notebooks: explore the data
 
 `notebooks/explore.ipynb` is a read-only tour of the four tables: what the field has tried, whether a gene has been knocked out before, experiments that changed more than one gene, and effect sizes by strategy. It also spells out what the dataset cannot answer yet. Needs pandas.
-
-## Adding a paper
-
-- **Record what is on the page**, not what the authors seem to mean. If a paper contradicts itself, record both versions and note the conflict rather than picking one.
-- **Every outcome row needs a `source_ref`**: the figure, table, or section the number came from, so anyone can check it.
-- **A row needs something to compare against.** A number from a named strain plus a control to read it against. Unquantified observations ("grew normally", sporulation with no counts) have no value, unit, or control, so they form no row. If they report an effect on the organism, they go in the experiment's `notes`. The test is whether the paper measured against a control, not whether the finding matters.
-- **`notes` holds two things:** what a reader needs to interpret the numbers (what a value can and cannot be compared against, unverified strain or construct details, contradictions in the source, evidence bearing on why a yield moved) and any reported effect on the organism, quantified or not. Facts already in another column stay out.
-- **Results the paper cites from elsewhere** get no row. Curate from the original paper or skip it.
 
 ## Validating the data
 
