@@ -125,7 +125,7 @@ Both assays so far (`milk-clotting assay` for chymosin, `lysozyme activity assay
 | `experiment_id` | `{study_id}_{label}` | `ZHU2012_CHY` |
 | `outcome_id` | `{study_id}_{3-digit sequence}` | `ZHU2012_001` |
 
-An `experiment_id` is the study name plus a short label, as in `ZHU2012_CHY`. There is no fixed vocabulary for that label: each study names its experiments after whichever thing it changed between them, so the label means different things in different studies.
+An `experiment_id` is the study name plus a short label, as in `ZHU2012_CHY`. The label means different things in different studies:
 
 | Example | The label names | Because that study varied |
 | --- | --- | --- |
