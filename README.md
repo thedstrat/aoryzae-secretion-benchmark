@@ -122,12 +122,10 @@ Both assays so far (`milk-clotting assay` for chymosin, `lysozyme activity assay
 | ID | Format | Example |
 | --- | --- | --- |
 | `study_id` | `{FIRSTAUTHOR}{YEAR}`, uppercase | `ZHU2012` |
-| `experiment_id` | `{study_id}_{SHORTLABEL}` | `ZHU2012_CHY` |
+| `experiment_id` | `{study_id}_{label}` | `ZHU2012_CHY` |
 | `outcome_id` | `{study_id}_{3-digit sequence}` | `ZHU2012_001` |
 
-IDs are lookup keys, not descriptions, so do not try to read an experiment's design off its ID. `experiments.csv` is the authoritative record of what was done.
-
-`SHORTLABEL` is the part after the study, and each study picks it from whatever it varied, so the same position holds a different kind of thing from study to study:
+An `experiment_id` is the study name plus a short label, as in `ZHU2012_CHY`. There is no fixed vocabulary for that label: each study names its experiments after whichever thing it changed between them, so the label means different things in different studies.
 
 | Example | The label names | Because that study varied |
 | --- | --- | --- |
