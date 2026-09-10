@@ -22,7 +22,7 @@ JIN2007_006,JIN2007_PALB,NA-2L-pa3,modified,17.8,mg/L,Highest secreted HLY yield
 JIN2007_007,JIN2007_TPPA_PEPE,N-2L,control,15.6,mg/L,Highest secreted HLY yield reported,1.0x,4,lysozyme activity assay,Fig. 5,back-calculated from 25.4 / 1.63; no N-2L value is stated in the paper
 JIN2007_008,JIN2007_TPPA_PEPE,N2L-peE-tp6,modified,25.4,mg/L,Highest secreted HLY yield reported,1.63x,4,lysozyme activity assay,Fig. 5,
 JIN2007_009,JIN2007_TPPA_PALB,N2L-pa-tp6,modified,16.0,mg/L,Highest secreted HLY yield reported,1.03x,4,lysozyme activity assay,Fig. 5,"read from Fig. 5, not stated in text; fold-change is a ratio of two estimates"
-YOON2013_001,YOON2013_AOATG1_DELETED,TODO,control,TODO,mg/L,Highest secreted CHY yield reported,TODO,4,milk-clotting assay,Fig. 2,
+YOON2013_001,YOON2013_AOATG1_DELETED,SlD-AKC1,control,TODO,mg/L,Highest secreted CHY yield reported,1.0x,4,milk-clotting assay,Fig. 2,
 YOON2013_002,YOON2013_AOATG1_DELETED,SKu70-ΔAoatg1-AKC2,modified,TODO,mg/L,Highest secreted CHY yield reported,2.3x,4,milk-clotting assay,Fig. 2,
 YOON2013_003,YOON2013_AOATG4_DELETED,SKu70-ΔAoatg4-AKC1,modified,TODO,mg/L,Highest secreted CHY yield reported,3.1x,4,milk-clotting assay,Fig. 2,
 YOON2013_004,YOON2013_AOATG8_DELETED,ΔAoatg8-AKC1,modified,TODO,mg/L,Highest secreted CHY yield reported,2.5x,4,milk-clotting assay,Fig. 2,
