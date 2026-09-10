@@ -71,7 +71,7 @@ One row per gene edit in an experiment; an experiment with several edited genes 
 | `gene_id` | Stable database identifier for the gene, which stays valid even if naming conventions change. `TODO` where it has not been looked up yet. |
 | `gene_name` | The name the paper uses for the gene, e.g. `Aoatg1`. |
 | `gene_role` | Why the researchers touched this gene: the strategy the edit belongs to. Values below. |
-| `edit_type` | The kind of edit, using the paper's own term. Values so far: `disruption`, the gene is broken so it no longer functions; `promoter_replacement`, the gene is left intact but its native promoter is swapped for another, so its expression can be controlled rather than removed. Others (`deletion`, `knockdown`, `overexpression`) will be added as papers require them. |
+| `edit_type` | The kind of edit, using the paper's own term. Values so far:<br>• `disruption`: the gene is broken so it no longer functions.<br>• `promoter_replacement`: the native promoter is swapped for a controllable one, leaving the gene intact. In `PAoatg1::pyrG-PthiA::Aoatg1`, thiamine-repressible `PthiA` replaces the `Aoatg1` promoter, with `pyrG` for selection. Yoon 2013 used this because deleting autophagy genes impaired conidia formation.<br>Others (`deletion`, `knockdown`, `overexpression`) will be added as papers require them. |
 | `edit_notation` | The genetic change written exactly as the paper reported it, e.g. `ΔAosedD::pyrG`. By convention Δ means the gene was removed or broken, and `::` introduces what was put in its place, usually a marker gene used to confirm the edit worked. |
 
 The `gene_role` values:
