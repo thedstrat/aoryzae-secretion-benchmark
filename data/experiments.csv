@@ -19,3 +19,7 @@ YOON2013_AOATG1_REPRESSIBLE,YOON2013,NSlD-PtA1,SlD-AKC1,bovine chymosin,PamyB::a
 YOON2013_AOATG4_REPRESSIBLE,YOON2013,NSlD-PtA4,SlD-AKC1,bovine chymosin,PamyB::amyB-kex2-CHY::TamyB::niaD (pgAKCN),"5x DPY, pH 5.5, 20 mL, 30C, 2e5 conidia, 4 d, no externally added thiamine",conidiation_largely_restored,
 YOON2013_AOATG8_REPRESSIBLE,YOON2013,NSlD-PtA8,SlD-AKC1,bovine chymosin,PamyB::amyB-kex2-CHY::TamyB::niaD (pgAKCN),"5x DPY, pH 5.5, 20 mL, 30C, 2e5 conidia, 4 d, no externally added thiamine",conidiation_reduced,
 YOON2013_AOATG15_REPRESSIBLE,YOON2013,NSlD-PtA15,SlD-AKC1,bovine chymosin,PamyB::amyB-kex2-CHY::TamyB::niaD (pgAKCN),"5x DPY, pH 5.5, 20 mL, 30C, 2e5 conidia, 4 d, no externally added thiamine",conidiation_reduced,
+YOON2011_P7_CHY,YOON2011,NSlD-ΔP7,SlD-ΔP5_2-AKC3,bovine chymosin,PamyB::amyB-kex2-CHY::TamyB::niaD (pgAKCN),"5x DPY, pH 5.5, 20 mL, 30C, 2e5 conidia, 3-6 d",not_reported,
+YOON2011_P9_CHY,YOON2011,NSlD-ΔP9,SlD-ΔP5_2-AKC3,bovine chymosin,PamyB::amyB-kex2-CHY::TamyB::niaD (pgAKCN),"5x DPY, pH 5.5, 20 mL, 30C, 2e5 conidia, 3-6 d",not_reported,
+YOON2011_P10_CHY,YOON2011,NSlD-ΔP10,SlD-ΔP5_2-AKC3,bovine chymosin,PamyB::amyB-kex2-CHY::TamyB::niaD (pgAKCN),"5x DPY, pH 5.5, 20 mL, 30C, 2e5 conidia, 3-6 d",no_reported_defect,
+YOON2011_P10_HLY,YOON2011,NSlD-ΔP10,SlD-ΔP5_2-HLY1,human lysozyme,PamyB::amyB-kex2-HLY::TamyB::niaD (pgAFLN),"5x DPY, pH 8.0, 100 mL, 30C, TODO conidia, 3-5 d",no_reported_defect,Table 1 writes this strain's construct as kex2-CHY although the plasmid is pgAFLN and the cargo is HLY. Treated as a source-table error.
