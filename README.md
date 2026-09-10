@@ -41,7 +41,7 @@ One row per published paper.
 | `doi` | Digital Object Identifier for the paper. |
 | `pmid` | PubMed identifier for the paper. |
 | `pdf_url` | Direct link to the article PDF, where a stable official publisher or repository link exists. |
-| `notes` | Caveats or context that apply to the whole paper rather than one experiment, so they are recorded once here instead of repeated on every experiment row. |
+| `notes` | Facts about the paper as a whole, recorded once here instead of repeated on every experiment row. Anything that varies between the experiments within a paper belongs on the experiment row instead. |
 
 ### `experiments.csv`
 
