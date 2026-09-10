@@ -41,6 +41,7 @@ One row per published paper.
 | `doi` | Digital Object Identifier for the paper. |
 | `pmid` | PubMed identifier for the paper. |
 | `pdf_url` | Direct link to the article PDF, where a stable official publisher or repository link exists. |
+| `notes` | Caveats or context that apply to the whole paper rather than one experiment, so they are recorded once here instead of repeated on every experiment row. |
 
 ### `experiments.csv`
 
@@ -57,7 +58,27 @@ Repeating the same comparison is not. Labs usually build several strains carryin
 | `cargo` | The protein the fungus was engineered to produce and secrete ("cargo" is standard usage for anything moved through the secretory pathway). |
 | `construct` | The DNA design used to express the cargo, written as the paper writes it: the promoter, any carrier protein the cargo is fused to, the cleavage site, the terminator, and the selection marker. |
 | `conditions` | How the fungus was grown, one string in fixed order: medium, starting pH (with the pH it drifted to, if reported), volume, temperature, inoculum, duration. Production numbers only compare between strains grown the same way. `5x DPY, pH 5.5 (5.3 by d4), 20 mL, 30C, 2e5 conidia, 3-6 d` reads as: five-times-strength DPY broth, pH 5.5 falling to 5.3 by day 4, 20 mL, 30 degrees C, inoculated with 200,000 spores, sampled days 3-6. |
-| `notes` | Two things: caveats a reader needs to interpret the numbers correctly, and any reported effect on the organism itself (growth, spore formation, shape). The second matters because an intervention that raises yield while harming the organism is not a free win. |
+| `host_effect` | Reported qualitative effect of the intervention on the fungus itself, such as growth, sporulation, or morphology. Kept to a short standard value so the column can be filtered: `no_reported_defect`, `conidiation_impaired`, `conidiation_reduced`, `conidiation_largely_restored`, `not_reported`. Numeric phenotype measurements belong in `outcomes`. |
+| `notes` | Experiment-specific caveats or context needed to interpret the result. Facts that apply to the whole paper live in `studies.csv` `notes` instead. |
+
+The `host_effect` values:
+
+| Value | Meaning |
+| --- | --- |
+| `no_reported_defect` | The paper reports normal growth, morphology, or another relevant lack of impairment. It does not mean every possible phenotype was tested. |
+| `conidiation_impaired` | Conidia (spore) formation was markedly reduced. |
+| `conidiation_reduced` | Conidia formation was affected, but the strain still produced some. |
+| `conidiation_largely_restored` | Conidia formation returned to near control levels. |
+| `not_reported` | The paper reports no relevant host phenotype. Host effects are never inferred. |
+
+Where a fact belongs:
+
+| The fact | Goes in |
+| --- | --- |
+| A numeric phenotype measurement | `outcomes.csv` |
+| A qualitative host phenotype | `experiments.csv` `host_effect` |
+| Interpretation or a caveat for one experiment | `experiments.csv` `notes` |
+| A fact or caveat shared across a paper's experiments | `studies.csv` `notes` |
 
 Reading one row: `JIN2007_TPPA_PEPE` expressed human lysozyme in strain `NA-2L-peE10`, measured against control `N-2L`. Both strains carry the same cargo construct and were grown the same way, so the difference between them is attributable to the gene edits, which are listed in `experiment_genes.csv`.
 
@@ -142,8 +163,8 @@ The rules followed when curating a paper into these tables. They are worth readi
 
 - **Record what the paper says**, not what the authors appear to mean. Where a paper contradicts itself, both versions are recorded and the conflict noted rather than resolved by guesswork.
 - **Every number cites its source.** Each outcome row names the figure, table, or section it came from, so any value can be checked against the paper.
-- **A measurement needs a comparison to earn a row.** A number from a named strain, plus a control to read it against. Statements with no number ("grew normally", impaired sporulation with no counts) cannot form a row, so where they describe an effect on the organism they go in the experiment's `notes` instead. The test is whether the paper measured against a control, not whether the finding is interesting.
-- **`notes` carries the caveats.** What a value can and cannot be compared against, unverified strain or construct details, contradictions in the source, evidence explaining why a yield moved, and any reported effect on the organism. Facts already held in another column are not repeated here.
+- **A measurement needs a comparison to earn a row.** A number from a named strain, plus a control to read it against. Statements with no number ("grew normally", impaired sporulation with no counts) cannot form a row, so where they describe an effect on the organism they go in `host_effect` instead. The test is whether the paper measured against a control, not whether the finding is interesting.
+- **`notes` carries the caveats.** What a value can and cannot be compared against, unverified strain or construct details, contradictions in the source, and evidence explaining why a yield moved. Facts already held in another column are not repeated here, and a caveat that applies to a whole paper is written once in `studies.csv` `notes` rather than on each of its experiment rows.
 - **Results a paper cites from elsewhere get no row.** They are curated from the original publication or skipped, so that every value traces to the paper that reported it.
 
 ## Notebooks: explore the data
