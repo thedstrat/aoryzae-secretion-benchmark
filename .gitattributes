@@ -1,0 +1,13 @@
+# Line endings are normalized to LF in the repository and checked out as LF.
+#
+# Without this the CSVs drift apart: experiments.csv and studies.csv were
+# committed with CRLF while experiment_genes.csv and outcomes.csv were LF, so
+# any editor or script that rewrote a file in text mode silently flipped its
+# endings and turned a few added rows into a whole-file diff.
+* text=auto eol=lf
+
+# Keep the data files diffable as text, one row per line.
+*.csv text eol=lf
+
+# Notebooks are JSON; normalize them too rather than leaving them unmanaged.
+*.ipynb text eol=lf
