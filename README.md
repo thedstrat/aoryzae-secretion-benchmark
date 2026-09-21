@@ -10,7 +10,7 @@ A curated dataset of published *Aspergillus oryzae* secretion-engineering experi
 
 The difficulty is that the pathway is tuned for the fungus's own proteins. A foreign protein can be degraded by native proteases, misrouted to the vacuole for disposal, or limited by the cell's capacity to fold it. Host engineering addresses this: delete a protease, shut off a degradation route, change how the product gene is expressed, then measure the effect on yield.
 
-This dataset collects those experiments from the literature, pairing each genetic change with its measured production outcome and the control strain that outcome should be read against. The protein being produced is referred to throughout as the **cargo**, standard usage for anything moved through the secretory pathway; the cargoes here are chymosin and human lysozyme. Every value is traceable to the figure or table it came from, and effects on the organism are recorded alongside yield, since an edit that raises production while impairing growth or sporulation carries a real cost.
+This dataset collects those experiments from the literature, pairing each genetic change with its measured production outcome and the control strain that outcome should be read against. The protein being produced is referred to throughout as the **cargo**, standard usage for anything moved through the secretory pathway; the cargoes here are chymosin, human lysozyme, and AmyB-EGFP (a fluorescent reporter fused to the native alpha-amylase carrier). Every value is traceable to the figure or table it came from, and effects on the organism are recorded alongside yield, since an edit that raises production while impairing growth or sporulation carries a real cost.
 
 ### Table structure
 
@@ -92,7 +92,7 @@ One row per gene edit in an experiment; an experiment with several edited genes 
 | `gene_id` | Stable database identifier for the gene, which stays valid even if naming conventions change. `TODO` where it has not been looked up yet. |
 | `gene_name` | The name the paper uses for the gene, e.g. `Aoatg1`. |
 | `gene_role` | Why the researchers touched this gene: the strategy the edit belongs to. Values below. |
-| `edit_type` | The kind of edit, using the paper's own term. Values so far:<br>• `disruption`: the gene is broken so it no longer functions.<br>• `promoter_replacement`: the native promoter is swapped for a controllable one, leaving the gene intact. In `PAoatg1::pyrG-PthiA::Aoatg1`, thiamine-repressible `PthiA` replaces the `Aoatg1` promoter, with `pyrG` for selection. Yoon 2013 used this because deleting autophagy genes impaired conidia formation.<br>Others (`deletion`, `knockdown`, `overexpression`) will be added as papers require them. |
+| `edit_type` | The kind of edit, using the paper's own term. Values so far:<br>• `disruption`: the gene is broken so it no longer functions.<br>• `promoter_replacement`: the native promoter is swapped for a controllable one, leaving the gene intact. In `PAoatg1::pyrG-PthiA::Aoatg1`, thiamine-repressible `PthiA` replaces the `Aoatg1` promoter, with `pyrG` for selection. Yoon 2013 used this because deleting autophagy genes impaired conidia formation.<br>• `deletion`: the gene is removed, using the paper's own term where it says deletion rather than disruption.<br>Others (`knockdown`, `overexpression`) will be added as papers require them. |
 | `edit_notation` | The genetic change written exactly as the paper reported it, e.g. `ΔAosedD::pyrG`. By convention Δ means the gene was removed or broken, and `::` introduces what was put in its place, usually a marker gene used to confirm the edit worked. |
 
 The `gene_role` values:
@@ -100,7 +100,7 @@ The `gene_role` values:
 | Value | Meaning |
 | --- | --- |
 | `remove_protease` | Delete enzymes that chew up the product. |
-| `fix_misrouting` | Stop the product being sent to the vacuole for disposal. |
+| `fix_misrouting` | Stop the product being sent to the vacuole for disposal. Also covers edits that release a product held back in the ER: `HOANG2015` deletes cargo receptors that retain the carrier fusion there, which is misrouting in the same sense even though nothing reaches the vacuole. |
 | `block_autophagy` | Shut down autophagy, the cell's bulk recycling route, which delivers misfolded secretory proteins from the ER to the vacuole for destruction. |
 | `reduce_competition` | Make less of the fungus's own secreted protein, so more capacity is free for the product. |
 | `improve_folding` | Help the cell fold the extra protein correctly, or handle the stress when it can't. |
@@ -136,7 +136,7 @@ Reading one row: `78.0 | mg/L | Highest secreted CHY yield reported | 2.9x` mean
 
 One row = one measurement. A strain with both a yield and a growth measurement gets two rows, distinguished by `measured_what`, never one row holding two values. No column flags which rows are "the result" and which are side effects; `measured_what` already says what each measured.
 
-Both assays so far (`milk-clotting assay` for chymosin, `lysozyme activity assay` for lysozyme) measure what the protein *does* and convert that to a concentration. Activity counts only protein that folded correctly, so a `mg/L` from activity is not interchangeable with one measured by mass. Check `assay` before comparing across studies. (`JIN2007` converted using the activity of pure human lysozyme, 100,000 U/mg.)
+Most assays here are activity-based (`milk-clotting assay` for chymosin, `lysozyme activity assay` for lysozyme, `alpha-amylase activity assay` for native amylase): they measure what the protein *does* and convert that to a concentration. Activity counts only protein that folded correctly, so a `mg/L` from activity is not interchangeable with one measured by mass. Check `assay` before comparing across studies. (`JIN2007` converted using the activity of pure human lysozyme, 100,000 U/mg.) `HOANG2015` is the exception: its AmyB-EGFP rows come from immunoblot densitometry, which measures band intensity relative to a control rather than an absolute amount, hence the `% of control` unit.
 
 ### IDs
 

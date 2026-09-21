@@ -37,3 +37,7 @@ YOON2011_P10_HLY,AO090120000474,pepA,remove_protease,disruption,ΔpepA
 YOON2011_P10_HLY,AO090012000209,AopepAa,remove_protease,disruption,ΔAopepAa
 YOON2011_P10_HLY,AO090023000872,AopepAd,remove_protease,disruption,ΔAopepAd
 YOON2011_P10_HLY,AO090103000026,cpI,remove_protease,disruption,ΔcpI::pyrG
+HOANG2015_AOVIP36_CHY,AO090026000428,Aovip36,fix_misrouting,deletion,ΔAovip36::pyrG
+HOANG2015_AOEMP47_CHY,AO090102000145,Aoemp47,fix_misrouting,deletion,ΔAoemp47::pyrG
+HOANG2015_AOVIP36_AMYB_EGFP,AO090026000428,Aovip36,fix_misrouting,deletion,ΔAovip36::pyrG
+HOANG2015_AOEMP47_AMYB_EGFP,AO090102000145,Aoemp47,fix_misrouting,deletion,ΔAoemp47::pyrG

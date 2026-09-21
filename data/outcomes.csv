@@ -39,3 +39,13 @@ YOON2011_003,YOON2011_P9_CHY,SlD-ΔP9_1-AKC1,modified,95.1,mg/L,Highest secreted
 YOON2011_004,YOON2011_P10_CHY,SlD-ΔP10_1-AKC7,modified,109.4,mg/L,Highest secreted CHY yield reported,1.30x,4,milk-clotting assay,Fig. 2a,
 YOON2011_005,YOON2011_P10_HLY,SlD-ΔP5_2-HLY1,control,26.5,mg/L,Highest secreted HLY yield reported,1.0x,4,lysozyme activity assay,Fig. 2d,
 YOON2011_006,YOON2011_P10_HLY,SlD-ΔP10_1-HLY1,modified,35.8,mg/L,Highest secreted HLY yield reported,1.35x,4,lysozyme activity assay,Fig. 2d,
+HOANG2015_001,HOANG2015_AOVIP36_CHY,SlD-AKC,control,TODO,mg/L,Secreted CHY yield,1.0x,4,milk-clotting assay,Fig. 4B,
+HOANG2015_002,HOANG2015_AOVIP36_CHY,SlDVp-AKC,modified,TODO,mg/L,Secreted CHY yield,2.0x,4,milk-clotting assay,Fig. 4B,"Text reports ~2-fold; 2.0x is approximate, not an exact measured ratio."
+HOANG2015_003,HOANG2015_AOEMP47_CHY,SlD-AKC,control,TODO,mg/L,Secreted CHY yield,1.0x,4,milk-clotting assay,Fig. 4B,
+HOANG2015_004,HOANG2015_AOEMP47_CHY,SlDEp-AKC,modified,TODO,mg/L,Secreted CHY yield,2.0x,4,milk-clotting assay,Fig. 4B,"Text reports ~2-fold; 2.0x is approximate, not an exact measured ratio."
+HOANG2015_005,HOANG2015_AOVIP36_AMYB_EGFP,SlD-aG-2,control,100,% of control,Secreted AmyB-EGFP band intensity,1.0x,2,anti-GFP immunoblot densitometry (ImageJ),Fig. 4C,Control normalized to 100% by the authors.
+HOANG2015_006,HOANG2015_AOVIP36_AMYB_EGFP,SlDVp-aG-2,modified,TODO,% of control,Secreted AmyB-EGFP band intensity,TODO,2,anti-GFP immunoblot densitometry (ImageJ),Fig. 4C,Increased vs control; figure-only value.
+HOANG2015_007,HOANG2015_AOEMP47_AMYB_EGFP,SlD-aG-2,control,100,% of control,Secreted AmyB-EGFP band intensity,1.0x,2,anti-GFP immunoblot densitometry (ImageJ),Fig. 4C,Control normalized to 100% by the authors.
+HOANG2015_008,HOANG2015_AOEMP47_AMYB_EGFP,SlDEp-aG-2,modified,TODO,% of control,Secreted AmyB-EGFP band intensity,TODO,2,anti-GFP immunoblot densitometry (ImageJ),Fig. 4C,Increased vs control; figure-only value.
+HOANG2015_009,HOANG2015_AOVIP36_CHY,NSlDVp-1,modified,0.70,relative,Native alpha-amylase activity,0.70x,2,alpha-amylase activity assay (Kikkoman kit),Fig. 3A,Same deletion that raised chymosin lowered native amylase ~30% (text). Value derived from the stated 30% reduction.
+HOANG2015_010,HOANG2015_AOEMP47_CHY,NSlDEp-1,modified,TODO,relative,Native alpha-amylase activity,1.0x,2,alpha-amylase activity assay (Kikkoman kit),Fig. 3A,Text reports no effect on native amylase; recorded as unchanged.
