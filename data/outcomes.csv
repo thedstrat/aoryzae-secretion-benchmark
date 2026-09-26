@@ -43,9 +43,9 @@ HOANG2015_001,HOANG2015_AOVIP36_CHY,SlD-AKC,control,26,mg/L,Secreted CHY yield,1
 HOANG2015_002,HOANG2015_AOVIP36_CHY,SlDVp-AKC,modified,49,mg/L,Secreted CHY yield,2.0x,4,milk-clotting assay,Fig. 4B,"Text reports ""~2-fold"". Estimated from Fig. 4B; not stated in text."
 HOANG2015_003,HOANG2015_AOEMP47_CHY,SlD-AKC,control,26,mg/L,Secreted CHY yield,1.0x,4,milk-clotting assay,Fig. 4B,Estimated from Fig. 4B; not stated in text.
 HOANG2015_004,HOANG2015_AOEMP47_CHY,SlDEp-AKC,modified,49,mg/L,Secreted CHY yield,2.0x,4,milk-clotting assay,Fig. 4B,"Text reports ""~2-fold"". Estimated from Fig. 4B; not stated in text."
-HOANG2015_005,HOANG2015_AOVIP36_AMYB_EGFP,SlD-aG-2,control,100,% of control,Secreted AmyB-EGFP band intensity,1.0x,2,anti-GFP immunoblot densitometry (ImageJ),Fig. 4C,
+HOANG2015_005,HOANG2015_AOVIP36_AMYB_EGFP,SlD-aG-2,control,TODO,% of control,Secreted AmyB-EGFP band intensity,1.0x,2,anti-GFP immunoblot densitometry (ImageJ),Fig. 4C,
 HOANG2015_006,HOANG2015_AOVIP36_AMYB_EGFP,SlDVp-aG-2,modified,TODO,% of control,Secreted AmyB-EGFP band intensity,3.0x,2,anti-GFP immunoblot densitometry (ImageJ),Fig. 4C,Estimated from Fig. 4C; not stated in text.
-HOANG2015_007,HOANG2015_AOEMP47_AMYB_EGFP,SlD-aG-2,control,100,% of control,Secreted AmyB-EGFP band intensity,1.0x,2,anti-GFP immunoblot densitometry (ImageJ),Fig. 4C,
+HOANG2015_007,HOANG2015_AOEMP47_AMYB_EGFP,SlD-aG-2,control,TODO,% of control,Secreted AmyB-EGFP band intensity,1.0x,2,anti-GFP immunoblot densitometry (ImageJ),Fig. 4C,
 HOANG2015_008,HOANG2015_AOEMP47_AMYB_EGFP,SlDEp-aG-2,modified,TODO,% of control,Secreted AmyB-EGFP band intensity,2.2x,2,anti-GFP immunoblot densitometry (ImageJ),Fig. 4C,Estimated from Fig. 4C; not stated in text.
-HOANG2015_009,HOANG2015_AOVIP36_CHY,NSlDVp-1,modified,0.70,relative,Native alpha-amylase activity,0.70x,2,alpha-amylase activity assay (Kikkoman kit),Fig. 3A,Derived from the stated 30% reduction; no absolute value given.
-HOANG2015_010,HOANG2015_AOEMP47_CHY,NSlDEp-1,modified,TODO,relative,Native alpha-amylase activity,1.0x,2,alpha-amylase activity assay (Kikkoman kit),Fig. 3A,"Text reports no effect; 1.0x records that, not a measured ratio."
+HOANG2015_009,HOANG2015_AOVIP36_CHY,NSlDVp-1,modified,TODO,% of control,Native alpha-amylase activity,0.70x,2,alpha-amylase activity assay (Kikkoman kit),Fig. 3A,Derived from the stated 30% reduction; no absolute value given.
+HOANG2015_010,HOANG2015_AOEMP47_CHY,NSlDEp-1,modified,TODO,% of control,Native alpha-amylase activity,1.0x,2,alpha-amylase activity assay (Kikkoman kit),Fig. 3A,"Text reports no effect; 1.0x records that, not a measured ratio."
