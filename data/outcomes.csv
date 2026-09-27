@@ -49,3 +49,19 @@ HOANG2015_007,HOANG2015_AOEMP47_AMYB_EGFP,SlD-aG-2,control,TODO,% of control,Sec
 HOANG2015_008,HOANG2015_AOEMP47_AMYB_EGFP,SlDEp-aG-2,modified,TODO,% of control,Secreted AmyB-EGFP band intensity,2.2x,2,anti-GFP immunoblot densitometry (ImageJ),Fig. 4C,Estimated from Fig. 4C; not stated in text.
 HOANG2015_009,HOANG2015_AOVIP36_CHY,NSlDVp-1,modified,TODO,% of control,Native alpha-amylase activity,0.70x,2,alpha-amylase activity assay (Kikkoman kit),Fig. 3A,Derived from the stated 30% reduction; no absolute value given.
 HOANG2015_010,HOANG2015_AOEMP47_CHY,NSlDEp-1,modified,TODO,% of control,Native alpha-amylase activity,1.0x,2,alpha-amylase activity assay (Kikkoman kit),Fig. 3A,"Text reports no effect; 1.0x records that, not a measured ratio."
+ZHU2013_001,ZHU2013_AOSEDD_CHY,AUT1-lD-AKC1,control,96.0,mg/L,Highest secreted CHY yield reported,1.0x,4,milk-clotting assay,Fig. 3a; text p. 6353,
+ZHU2013_002,ZHU2013_AOSEDD_CHY,AUT1-lD-sD-AKC8,modified,138.2,mg/L,Highest secreted CHY yield reported,1.4x,4,milk-clotting assay,Fig. 3a; text p. 6353,
+ZHU2013_003,ZHU2013_AOSEDD_CHY,AUT1-lD-sD-AKC9,modified,144.5,mg/L,Highest secreted CHY yield reported,1.5x,4,milk-clotting assay,Fig. 3a; text p. 6353,
+ZHU2013_004,ZHU2013_AOSEDD_CHY,AUT1-lD-sD-AKC10,modified,135.8,mg/L,Highest secreted CHY yield reported,1.4x,4,milk-clotting assay,Fig. 3a; text p. 6353,
+ZHU2013_005,ZHU2013_AOSEDD_HLY,AUT1-lD-HLY6,control,39.0,mg/L,Highest secreted HLY yield reported,1.0x,4,lysozyme activity assay,Fig. 3c; text p. 6353,
+ZHU2013_006,ZHU2013_AOSEDD_HLY,AUT1-lD-sD-HLY3,modified,73.0,mg/L,Highest secreted HLY yield reported,1.9x,4,lysozyme activity assay,Fig. 3c; text p. 6353,
+ZHU2013_007,ZHU2013_AOSEDD_HLY,AUT1-lD-sD-HLY4,modified,75.2,mg/L,Highest secreted HLY yield reported,1.9x,4,lysozyme activity assay,Fig. 3c; text p. 6353,
+ZHU2013_008,ZHU2013_AOSEDD_HLY,AUT1-lD-sD-HLY5,modified,73.7,mg/L,Highest secreted HLY yield reported,1.9x,4,lysozyme activity assay,Fig. 3c; text p. 6353,
+ZHU2013_009,ZHU2013_AOVPS10_CHY,AUT1-lD-v10-AKC1,modified,116.2,mg/L,Highest secreted CHY yield reported,1.2x,4,milk-clotting assay,Fig. 4a; text p. 6354,
+ZHU2013_010,ZHU2013_AOVPS10_HLY,AUT1-lD-v10-HLY1,modified,71.5,mg/L,Highest secreted HLY yield reported,1.8x,4,lysozyme activity assay,Fig. 4c; text p. 6354,
+ZHU2013_011,ZHU2013_ADD_AOSEDD_CHY,AUT1-lD-v10-sD-AKC5,modified,156.1,mg/L,Highest secreted CHY yield reported,1.34x,4,milk-clotting assay,Fig. 4a; text p. 6354,Fold calculated from stated values versus Aovps10 control.
+ZHU2013_012,ZHU2013_ADD_AOSEDD_CHY,AUT1-lD-v10-sD-AKC6,modified,152.4,mg/L,Highest secreted CHY yield reported,1.31x,4,milk-clotting assay,Fig. 4a; text p. 6354,Fold calculated from stated values versus Aovps10 control.
+ZHU2013_013,ZHU2013_ADD_AOSEDD_CHY,AUT1-lD-v10-sD-AKC8,modified,149.6,mg/L,Highest secreted CHY yield reported,1.29x,4,milk-clotting assay,Fig. 4a; text p. 6354,Fold calculated from stated values versus Aovps10 control.
+ZHU2013_014,ZHU2013_ADD_AOSEDD_HLY,AUT1-lD-v10-sD-HLY2,modified,80.1,mg/L,Highest secreted HLY yield reported,1.12x,4,lysozyme activity assay,Fig. 4c; text p. 6354,Fold calculated from stated values versus Aovps10 control.
+ZHU2013_015,ZHU2013_ADD_AOSEDD_HLY,AUT1-lD-v10-sD-HLY4,modified,80.6,mg/L,Highest secreted HLY yield reported,1.13x,4,lysozyme activity assay,Fig. 4c; text p. 6354,Fold calculated from stated values versus Aovps10 control.
+ZHU2013_016,ZHU2013_ADD_AOSEDD_HLY,AUT1-lD-v10-sD-HLY6,modified,84.3,mg/L,Highest secreted HLY yield reported,1.18x,4,lysozyme activity assay,Fig. 4c; text p. 6354,Fold calculated from stated values versus Aovps10 control.
