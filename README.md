@@ -95,6 +95,12 @@ One row per gene edit in an experiment; an experiment with several edited genes 
 | `edit_type` | The kind of edit, using the paper's own term. Values so far:<br>• `disruption`: the gene is broken so it no longer functions.<br>• `promoter_replacement`: the native promoter is swapped for a controllable one, leaving the gene intact. In `PAoatg1::pyrG-PthiA::Aoatg1`, thiamine-repressible `PthiA` replaces the `Aoatg1` promoter, with `pyrG` for selection. Yoon 2013 used this because deleting autophagy genes impaired conidia formation.<br>• `deletion`: the gene is removed, using the paper's own term where it says deletion rather than disruption.<br>Others (`knockdown`, `overexpression`) will be added as papers require them. |
 | `edit_notation` | The genetic change written exactly as the paper reported it, e.g. `ΔAosedD::pyrG`. By convention Δ means the gene was removed or broken, and `::` introduces what was put in its place, usually a marker gene used to confirm the edit worked. |
 
+These rows list only what changed, not the strain's full genotype. A gene appears here when the modified strain has that edit and its control does not. `YOON2011_P10_CHY` lists five genes, but that strain carries ten deletions; the other five are in its control strain too, so they are not what the fold change measures.
+
+This is what makes `vs_control` meaningful: everything else is held constant, so the change is attributable to the genes listed here.
+
+For a strain's full genotype, see the strain table in the source paper. `edited_parent_strain`, `control_strain`, and `studies.csv` `notes` carry the lineage you need to read a result.
+
 The `gene_role` values:
 
 | Value | Meaning |
