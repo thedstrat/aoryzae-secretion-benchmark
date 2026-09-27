@@ -47,3 +47,6 @@ ZHU2013_AOVPS10_CHY,AO090010000769,Aovps10,fix_misrouting,disruption,ΔAovps10::
 ZHU2013_AOVPS10_HLY,AO090010000769,Aovps10,fix_misrouting,disruption,ΔAovps10::pyrG
 ZHU2013_ADD_AOSEDD_CHY,AO090166000084,AosedD,remove_protease,disruption,ΔAosedD::pyrG
 ZHU2013_ADD_AOSEDD_HLY,AO090166000084,AosedD,remove_protease,disruption,ΔAosedD::pyrG
+YOON2009_P5_CHY,TODO,nptB,remove_protease,disruption,ΔnptB
+YOON2009_P5_CHY,TODO,dppIV,remove_protease,disruption,ΔdppIV
+YOON2009_P5_CHY,TODO,dppV,remove_protease,disruption,ΔdppV::pyrG

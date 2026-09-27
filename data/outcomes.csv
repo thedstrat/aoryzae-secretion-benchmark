@@ -33,7 +33,7 @@ YOON2013_008,YOON2013_AOATG1_REPRESSIBLE,SlD-PtA1-AKC,modified,63,mg/L,Secreted 
 YOON2013_009,YOON2013_AOATG4_REPRESSIBLE,SlD-PtA4-AKC,modified,63,mg/L,Secreted CHY production at day 4,1.7x,4,milk-clotting assay,Fig. 4A,"read from Fig. 4, day-4 bar (max), not stated in text"
 YOON2013_010,YOON2013_AOATG8_REPRESSIBLE,SlD-PtA8-AKC,modified,77,mg/L,Secreted CHY production at day 4,2.4x,4,milk-clotting assay,Fig. 4A,"read from Fig. 4, day-4 bar (max), not stated in text. Estimated values imply 2.08x, not the reported 2.4x."
 YOON2013_011,YOON2013_AOATG15_REPRESSIBLE,SlD-PtA15-AKC,modified,62,mg/L,Secreted CHY production at day 4,1.6x,4,milk-clotting assay,Fig. 4A,"read from Fig. 4, day-4 bar (max), not stated in text. Estimated values imply 1.68x, not the reported 1.6x."
-YOON2011_001,YOON2011_P7_CHY,SlD-ΔP5_2-AKC3,control,84.4,mg/L,Highest secreted CHY yield reported,1.0x,4,milk-clotting assay,Fig. 2a,Cited to Yoon et al. 2009; may not have been newly measured in this study.
+YOON2011_001,YOON2011_P7_CHY,SlD-ΔP5_2-AKC3,control,84.4,mg/L,Highest secreted CHY yield reported,1.0x,4,milk-clotting assay,Fig. 2a,"Same measurement as YOON2009_004, cited from Yoon et al. 2009; not measured independently here."
 YOON2011_002,YOON2011_P7_CHY,SlD-ΔP7_1-AKC2,modified,91.8,mg/L,Highest secreted CHY yield reported,1.09x,4,milk-clotting assay,Fig. 2a,
 YOON2011_003,YOON2011_P9_CHY,SlD-ΔP9_1-AKC1,modified,95.1,mg/L,Highest secreted CHY yield reported,1.13x,4,milk-clotting assay,Fig. 2a,
 YOON2011_004,YOON2011_P10_CHY,SlD-ΔP10_1-AKC7,modified,109.4,mg/L,Highest secreted CHY yield reported,1.30x,4,milk-clotting assay,Fig. 2a,
@@ -65,3 +65,7 @@ ZHU2013_013,ZHU2013_ADD_AOSEDD_CHY,AUT1-lD-v10-sD-AKC8,modified,149.6,mg/L,Highe
 ZHU2013_014,ZHU2013_ADD_AOSEDD_HLY,AUT1-lD-v10-sD-HLY2,modified,80.1,mg/L,Highest secreted HLY yield reported,1.12x,4,lysozyme activity assay,Fig. 4c; text p. 6354,Fold calculated from stated values versus Aovps10 control.
 ZHU2013_015,ZHU2013_ADD_AOSEDD_HLY,AUT1-lD-v10-sD-HLY4,modified,80.6,mg/L,Highest secreted HLY yield reported,1.13x,4,lysozyme activity assay,Fig. 4c; text p. 6354,Fold calculated from stated values versus Aovps10 control.
 ZHU2013_016,ZHU2013_ADD_AOSEDD_HLY,AUT1-lD-v10-sD-HLY6,modified,84.3,mg/L,Highest secreted HLY yield reported,1.18x,4,lysozyme activity assay,Fig. 4c; text p. 6354,Fold calculated from stated values versus Aovps10 control.
+YOON2009_001,YOON2009_P5_CHY,SlD-tApE2-AKC1,control,63.1,mg/L,Highest secreted CHY yield reported,1.0x,4,milk-clotting assay,Fig. 3a; text p. 698,
+YOON2009_002,YOON2009_P5_CHY,SlD-tApEnBdIVdV1-AKC1,modified,75.5,mg/L,Highest secreted CHY yield reported,1.20x,4,milk-clotting assay,Fig. 3a; text p. 698,
+YOON2009_003,YOON2009_P5_CHY,SlD-tApEnBdIVdV2-AKC1,modified,80.3,mg/L,Highest secreted CHY yield reported,1.27x,4,milk-clotting assay,Fig. 3a; text p. 698,
+YOON2009_004,YOON2009_P5_CHY,SlD-tApEnBdIVdV2-AKC3,modified,84.4,mg/L,Highest secreted CHY yield reported,1.34x,4,milk-clotting assay,Fig. 3a; text p. 698,
