@@ -15,6 +15,8 @@ from pathlib import Path
 
 import pandas as pd
 
+from build_edited_genes import COLUMN as EDITED_GENES, column_for
+
 DATA = Path(__file__).resolve().parent.parent / "data"
 ARMS = {"control", "modified"}
 
@@ -56,6 +58,25 @@ def rows_failing(frame, column, ok, complaint, id_column=None):
             where += f" ({id_column}={frame.at[i, id_column]})"
         problems.append(f"{where}: {column} {complaint.format(value or '(blank)')}")
     return problems
+
+
+def matches_gene_rows(experiments, genes):
+    """Report every experiments.csv row whose edited_genes_vs_control is stale.
+
+    The column is generated from experiment_genes.csv, so the two disagreeing
+    means experiments.csv was hand-edited or a gene row moved under it since
+    it was last built.
+    """
+    if EDITED_GENES not in experiments.columns:
+        return [f"experiments.csv has no {EDITED_GENES} column; "
+                "run python scripts/build_edited_genes.py"]
+    expected = column_for(experiments, genes)
+    return [
+        f"line {at_line(i)} ({experiments.at[i, 'experiment_id']}): "
+        f"{EDITED_GENES} is '{value or '(blank)'}', expected '{want}'"
+        for (i, value), want in zip(experiments[EDITED_GENES].items(), expected)
+        if value != want
+    ]
 
 
 def main():
@@ -115,6 +136,9 @@ def main():
         ("experiments.csv: every experiment has at least one experiment_genes row",
             rows_failing(experiments, "experiment_id", lambda v: v in edited,
                          "'{}' has no rows in experiment_genes.csv")),
+
+        (f"experiments.csv: {EDITED_GENES} agrees with experiment_genes.csv",
+            matches_gene_rows(experiments, genes)),
     ]
 
     for label, problems in checks:

@@ -55,11 +55,14 @@ Repeating the same comparison is not. Labs usually build several strains carryin
 | `study_id` | Study that reports the experiment. |
 | `edited_parent_strain` | The strain that the modified production strain was built directly from. Strains are constructed in lineages, each edit made on top of an earlier strain, so this records the immediate predecessor rather than the original wild isolate. |
 | `control_strain` | The strain the modified one was measured against. |
+| `edited_genes_vs_control` | The genes this experiment edited relative to its control, joined by `; ` in the order they appear in `experiment_genes.csv`, e.g. `nptB; dppIV; dppV`. Each gene is listed once however many edit rows it has, and every edit type is included, not only deletions. `TODO` where the experiment has no gene rows or one of their `gene_name` values is missing, since an empty cell would read as "edited nothing". |
 | `cargo` | The protein the fungus was engineered to produce and secrete ("cargo" is standard usage for anything moved through the secretory pathway). |
 | `construct` | The DNA design used to express the cargo, written as the paper writes it: the promoter, any carrier protein the cargo is fused to, the cleavage site, the terminator, and the selection marker. |
 | `conditions` | How the fungus was grown, one string in fixed order: medium, starting pH (with the pH it drifted to, if reported), volume, temperature, inoculum, duration. Production numbers only compare between strains grown the same way. `5x DPY, pH 5.5 (5.3 by d4), 20 mL, 30C, 2e5 conidia, 3-6 d` reads as: five-times-strength DPY broth, pH 5.5 falling to 5.3 by day 4, 20 mL, 30 degrees C, inoculated with 200,000 spores, sampled days 3-6. |
 | `host_effect` | Reported qualitative effect of the intervention on the fungus itself, such as growth, sporulation, or morphology. Kept to a short standard value so the column can be filtered: `no_reported_defect`, `conidiation_impaired`, `conidiation_reduced`, `conidiation_largely_restored`, `not_reported`. Numeric phenotype measurements belong in `outcomes`. |
 | `notes` | Experiment-specific caveats or context needed to interpret the result. Facts that apply to the whole paper live in `studies.csv` `notes` instead. |
+
+`experiment_genes.csv` is the source of truth for gene edits. `edited_genes_vs_control` in `experiments.csv` is a generated summary of the edits that differ from the experiment's control, not the strain's full genotype. Regenerate it with `scripts/build_edited_genes.py` after changing experiments or gene-edit rows; never edit it by hand.
 
 The `host_effect` values:
 
@@ -185,6 +188,9 @@ The rules followed when curating a paper into these tables. They are worth readi
 - references between files point at rows that exist
 - `source_ref` and `arm` are filled in on every outcome row
 - every experiment has at least one gene row and one outcome row
+- `edited_genes_vs_control` in `experiments.csv` still agrees with `experiment_genes.csv`
+
+`python scripts/build_edited_genes.py` rebuilds that column from `experiment_genes.csv`, which is what to run when the check above fails.
 
 ## Citation
 
