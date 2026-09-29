@@ -176,6 +176,8 @@ The rules followed when curating a paper into these tables. They are worth readi
 - **`notes` carries the caveats.** What a value can and cannot be compared against, unverified strain or construct details, contradictions in the source, and evidence explaining why a yield moved. Facts already held in another column are not repeated here, and a caveat that applies to a whole paper is written once in `studies.csv` `notes` rather than on each of its experiment rows.
 - **Results a paper cites from elsewhere get no row.** They are curated from the original publication or skipped, so that every value traces to the paper that reported it.
 
+`CURATION_RULES.md` is the long version: the checklist someone works through when adding a paper, including how to tell one experiment from two and when to leave a number out rather than estimate it.
+
 ## Notebooks: explore the data
 
 `notebooks/explore.ipynb` is a read-only tour of the four tables: what the field has tried, whether a gene has been knocked out before, experiments that changed more than one gene, and effect sizes by strategy. It also spells out what the dataset cannot answer yet. Needs pandas.
