@@ -34,9 +34,9 @@ One row per published paper.
 | Column | Meaning |
 | --- | --- |
 | `study_id` | Unique identifier for the study. |
+| `title` | Paper title. |
 | `authors` | Paper authors. |
 | `year` | Publication year. |
-| `title` | Paper title. |
 | `journal` | Journal that published the paper. |
 | `doi` | Digital Object Identifier for the paper. |
 | `pmid` | PubMed identifier for the paper. |
