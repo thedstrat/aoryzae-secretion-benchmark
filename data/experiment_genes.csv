@@ -51,3 +51,8 @@ YOON2009_P5_CHY,TODO,nptB,remove_protease,disruption,ΔnptB
 YOON2009_P5_CHY,TODO,dppIV,remove_protease,disruption,ΔdppIV
 YOON2009_P5_CHY,TODO,dppV,remove_protease,disruption,ΔdppV::pyrG
 KIMURA2008_NPTB_HLY,AO090010000493,nptB,remove_protease,disruption,ΔnptB::adeA
+PANCHANAWAPORN2026_AOSLY1_GFP,TODO,Aosly1,enhance_trafficking,overexpression,PAoubi::Aosly1
+PANCHANAWAPORN2026_AOBET1_GFP,TODO,Aobet1,enhance_trafficking,overexpression,PAoubi::Aobet1
+PANCHANAWAPORN2026_AOSSO1_GFP,TODO,Aosso1,enhance_trafficking,overexpression,PAoubi::Aosso1
+PANCHANAWAPORN2026_AOSEC1_GFP,TODO,Aosec1,enhance_trafficking,overexpression,PAoubi::Aosec1
+PANCHANAWAPORN2026_AOSLY1_CASEIN,TODO,Aosly1,enhance_trafficking,overexpression,PAoubi::Aosly1
