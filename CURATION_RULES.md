@@ -1,4 +1,28 @@
-# A. oryzae secretion benchmark: curation rules
+# Curation rules: A. oryzae secretion benchmark
+
+## Three gates, before anything else
+
+Answer in order. If a paper fails any gate, STOP. Immediately tell the user which gate failed. Do not produce rows.
+
+1. **Does it measure a secreted protein?** Name the measurement and the
+   table or figure. Morphology, viscosity, growth and gene expression
+   don't count. A result showing no improvement still passes, as long
+   as the measurement exists.
+2. **Is there a control to read it against?** Name the control strain.
+3. **Is the intervention a host-gene edit?** Deletion, disruption,
+   promoter replacement or overexpression. Changes to the expression
+   construct alone (signal peptide, carrier, promoter, codon
+   optimization) and pure process optimization are out of scope for
+   now. A paper testing both is in scope for its host-gene arms only.
+
+Output one of these first, before any other text:
+
+    SCOPE: IN — <measurement, where it appears, control strain>
+    SCOPE: OUT — <which gate failed>
+
+Example failure: Müller 2003 deleted two chitin synthase genes and
+measured morphology and viscosity. Native amylase was roughly
+unchanged and no heterologous protein was tested. Fails gate 1.
 
 Use these when adding or revising a curated study.
 
