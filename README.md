@@ -197,6 +197,52 @@ The rules followed when curating a paper into these tables. They are worth readi
 
 `python scripts/build_edited_genes.py` rebuilds that column from `experiment_genes.csv`, which is what to run when the check above fails.
 
+## Backlog
+
+### Deferred by decision
+
+- Construct interventions — signal peptides and carrier fusions. Design settled: three columns on experiments plus experiment_constructs.csv.
+- Time-series data — time_course JSON column, designed but shelved. Revisit if a modeller needs rates rather than endpoints.
+
+### Other host organisms
+
+- K. phaffii (Pichia) — biggest secretion literature; only host with an existing model to validate against.
+- T. reesei — the only host with real ovalbumin work.
+- A. niger — closest biologically; its protease knowledge is known not to transfer, which is the reason to curate both.
+- S. cerevisiae — pcSecYeast's own organism.
+
+### Papers to assess
+
+- Huang 2026 (chsY) — morphology edit, 52% more lipase. Fills the empty morphology branch.
+- Antoniel 2026 (msnA/crzA) — in studies.csv, not curated.
+- Kitamoto 2015 — in scope, identifiers unverified.
+- Arnau/Hansen 2025 — host edits behind the GRAS beta-lactoglobulin strain.
+- Chutrakul 2025 (AoprtR), Nemoto 2009 (AUT1), Yaver 2000, Maruyama 2008 — all need a scope check before curating.
+- 21st.BIO patent WO2025133003A2 — needs a patent source type first.
+- Two morphology papers — α-1,3-glucan/GAG deletion, 2026 hydrophobin preprint.
+
+### Expand explore.ipynb
+
+- Rank edits by fold change, filtered to one cargo and one unit.
+- Compare each edit against what it was measured against, so increments on already-improved strains are visible.
+- Show edits tested on more than one cargo, with the result for each.
+- Show yield gains next to host damage.
+- List combination results next to their single edits.
+- Filter by growth conditions, pH especially.
+- Coverage summary: which mechanisms, cargo and hosts are thin or missing.
+- Flag studies with no curated experiments yet.
+
+### Data quality
+
+- Resolve the Yoon 2013 control strain contradiction.
+- Fix Yoon 2013 "(max)" notes that should say day 4.
+- Check Hoang control rows that may duplicate one measurement.
+- Digitize Kimura Fig. 4 and Panchanawaporn Fig. 3 in WebPlotDigitizer.
+- Nakajima's 1.3 control: confirm figure-read vs back-calculated.
+- Decide how to mark measurement basis (absolute vs normalized).
+- Optional: batch-fill gene_id locus tags against FungiDB.
+- Optional: validator checks for the mechanical rules the curation doc delegates to it.
+
 ## Citation
 
 If you use this dataset, please cite it:
