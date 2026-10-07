@@ -238,7 +238,6 @@ The rules followed when curating a paper into these tables. They are worth readi
 - Fix Yoon 2013 "(max)" notes that should say day 4.
 - Check Hoang control rows that may duplicate one measurement.
 - Digitize Kimura Fig. 4 and Panchanawaporn Fig. 3 in WebPlotDigitizer.
-- Nakajima's 1.3 control: confirm figure-read vs back-calculated.
 - Decide how to mark measurement basis (absolute vs normalized).
 - Optional: batch-fill gene_id locus tags against FungiDB.
 - Optional: validator checks for the mechanical rules the curation doc delegates to it.

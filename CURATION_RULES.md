@@ -30,6 +30,73 @@ Mechanical conventions (formats, vocabularies, referential integrity) are
 enforced by `scripts/validate_data.py`, not restated here. This document
 covers judgment only.
 
+### Tag excluded construct work
+
+When a paper passes the gates but also tested a cargo-construct variable,
+record it in `studies.notes` in this exact form, so it can be found later
+with a plain text search:
+
+    EXCLUDED_CONSTRUCT:<TYPE>: <short description> [<source location>]
+
+The types:
+
+    SIGNAL_PEPTIDE
+    CARRIER_FUSION
+    CLEAVAGE_LINKER
+    CODON_OPTIMIZATION
+    PROMOTER
+    TERMINATOR
+    COPY_NUMBER
+    INTEGRATION_SITE
+    PLASMID_RATIO
+    CONSTRUCT_ARCHITECTURE
+
+One tag per type. Leave the bracket off where the location is not
+established, and do not guess a figure.
+
+**Tag a variable the paper changed and evaluated, not a component it
+merely used.** Nearly every paper here builds on an AmyB carrier fusion.
+That is the shared baseline, not an experiment, and it gets no tag. Tag a
+carrier fusion only where the paper compared it against something else.
+
+A result counts whether or not it is a number. "Correctly assembled
+heterodimer only at a 1:5 plasmid ratio" is as much a finding as a fold
+change, and either is worth tagging.
+
+Changing how a *host* gene is expressed is a host-gene intervention, not
+construct work. `hacA` overexpression is curated as an edit and gets no
+tag.
+
+Add a tag to what the note already says. Never drop a scientific caveat
+to make room for one.
+
+A paper carrying no tag has not been shown to be free of construct work;
+it may simply not have been looked at. Absence of a tag is not a review.
+
+Example:
+
+    EXCLUDED_CONSTRUCT:CLEAVAGE_LINKER: Added a triglycine linker after
+    the KEX2 cleavage site to improve processing [Table 1; Fig. 1;
+    Results].
+
+Process work is out of scope under the same gate, and gets its own family
+in the same form:
+
+    EXCLUDED_PROCESS:<TYPE>: <short description> [<source location>]
+
+The types:
+
+    MEDIUM
+    PH
+    TEMPERATURE
+    FEED_RATE
+    CULTURE_SCALE
+
+The same restriction applies. Tag a condition the paper varied and
+compared, not one it simply grew everything in. A process result can
+dwarf every gene edit in the dataset, which is the reason to record it
+rather than leave it out.
+
 ---
 
 ## Rule 0: read the files first
