@@ -10,8 +10,8 @@ Answer in order. If a paper fails any gate, STOP. Immediately tell the user whic
    as the measurement exists.
 2. **Is there a control to read it against?** Name the control strain.
 3. **Is the intervention a host-gene edit?** Deletion, disruption,
-   promoter replacement or overexpression. Changes to the expression
-   construct alone (signal peptide, carrier, promoter, codon
+   promoter replacement, overexpression or knockdown. Changes to the
+   expression construct alone (signal peptide, carrier, promoter, codon
    optimization) and pure process optimization are out of scope for
    now. A paper testing both is in scope for its host-gene arms only.
 
@@ -222,6 +222,16 @@ built from. `control_strain` is the strain actually measured against it.
 They can differ. Never substitute a better-matched control the authors
 did not measure. Note background differences that limit what can be
 attributed to the edit.
+
+One construct hitting several genes is one intervention. Where a single
+RNAi hairpin or similar construct silences a family of homologous genes
+because their sequences are too alike to target separately, record every
+gene it hits in `experiment_genes` and keep them in one experiment. The
+result belongs to the whole set, exactly as for a combination edit, and
+must not be attributed to any individual gene. Say so in
+`experiments.notes`, because the gene rows alone look like a deliberate
+multi-gene strain. Nemoto 2009's hairpin against `amyB` exon 9 silences
+`amyA`, `amyB` and `amyC` together.
 
 ---
 

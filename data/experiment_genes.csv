@@ -57,3 +57,6 @@ PANCHANAWAPORN2026_AOSSO1_GFP,TODO,Aosso1,enhance_trafficking,overexpression,PAo
 PANCHANAWAPORN2026_AOSEC1_GFP,TODO,Aosec1,enhance_trafficking,overexpression,PAoubi::Aosec1
 PANCHANAWAPORN2026_AOSLY1_CASEIN,TODO,Aosly1,enhance_trafficking,overexpression,PAoubi::Aosly1
 NAKAJIMA2006_HACA_NCL,TODO,hacA,improve_folding,overexpression,PpgkA::active hacA cDNA
+NEMOTO2009RNAI_CHY,TODO,amyA,reduce_competition,knockdown,pgAAiN hairpin RNA (amyB exon 9)
+NEMOTO2009RNAI_CHY,TODO,amyB,reduce_competition,knockdown,pgAAiN hairpin RNA (amyB exon 9)
+NEMOTO2009RNAI_CHY,TODO,amyC,reduce_competition,knockdown,pgAAiN hairpin RNA (amyB exon 9)
