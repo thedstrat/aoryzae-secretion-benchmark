@@ -47,6 +47,12 @@ VOCABULARIES = {
         "disruption", "promoter_replacement", "deletion", "overexpression",
         "knockdown", "point_mutation",
     },
+    # unit decides whether two fold changes can be compared at all: a ratio is
+    # only meaningful against another ratio in the same unit, measured the same
+    # way. A new one is a maintainer decision like the vocabularies above.
+    "unit": {
+        "mg/L", "U/mL", "U/mg", "% of control", "AU",
+    },
 }
 
 # Rule 2: existing papers contribute roughly this many outcome rows each. Only
@@ -315,6 +321,8 @@ def main(strict=False):
             undeclared_terms(genes, "gene_role", "gene_name")),
         ("experiment_genes.csv: edit_type is a declared vocabulary value",
             undeclared_terms(genes, "edit_type", "gene_name")),
+        ("outcomes.csv: unit is a declared vocabulary value",
+            undeclared_terms(outcomes, "unit", "outcome_id")),
 
         ("outcomes.csv: every curated study has a control measurement",
             studies_without_a_control(experiments, outcomes)),

@@ -351,6 +351,9 @@ number, do not invent a measured `1.0x`.
 Blank describes what the source provides, not a claim the quantity could
 never be measured.
 
+The same split applies to `day`: `TODO` where the source gives a
+timepoint nobody has read yet, blank where it gives none at all.
+
 Keep `unit` and `vs_control` populated where supported. The unit
 identifies the measurement type even when `value` is empty. Use `TODO`
 for an unresolved fold change rather than inventing one.

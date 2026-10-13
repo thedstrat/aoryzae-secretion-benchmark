@@ -134,10 +134,10 @@ One row per measured result for one experimental arm or strain.
 | `strain` | The exact strain that produced this measurement. |
 | `arm` | Which side of the comparison this row is: `control` (the unedited reference strain) or `modified` (the strain carrying the edit). |
 | `value` | The number reported. |
-| `unit` | What the number is measured in. |
+| `unit` | What the number is measured in. Kept to a declared set, because a fold change is only comparable to another one in the same unit: `mg/L` (mass concentration, including an activity the authors converted to one), `U/mL` (enzyme activity), `U/mg` (activity per mg of secreted protein), `% of control` (relative band or signal intensity), `AU` (arbitrary fluorescence units). Adding one is a maintainer decision, like the vocabularies above. |
 | `measured_what` | What this row measured: secreted yield, growth, broth viscosity, spore formation. Free text rather than a fixed vocabulary, because papers measure different things; it is also what you filter on to separate the production result from the side effects. |
 | `vs_control` | How this value compares to its control, as a multiple. `2.9x` means 2.9 times what the control produced; the control's own row is `1.0x` by definition. This is the column most benchmarks care about, since fold-change over control survives differences in assay and culture setup better than raw values do. |
-| `day` | Timepoint the value was taken at. |
+| `day` | Timepoint the value was taken at. Blank where the source reports none, as in `ANTONIEL2026`, whose figures give no timepoint in the text or the legends; `TODO` only where the source does give one that has not been read yet. |
 | `assay` | The method used. Activity-based assays measure only correctly folded, functional protein, so a mg/L value derived from activity is not directly comparable to one measured by mass. |
 | `source_ref` | The figure, table, or section the value came from. Required on every row. |
 | `notes` | Caveats needed to read the value correctly. |
