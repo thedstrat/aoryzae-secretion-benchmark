@@ -92,3 +92,13 @@ NEMOTO2009RNAI_007,NEMOTO2009RNAI_CHY,tpi-GCS1,modified,6.0,U/mL,Native alpha-am
 NEMOTO2009RNAI_008,NEMOTO2009RNAI_CHY,tpi-GCS3,modified,5.6,U/mL,Native alpha-amylase activity,0.31x,4,alpha-amylase assay kit (Kikkoman),Fig. 2B,
 NEMOTO2009RNAI_009,NEMOTO2009RNAI_CHY,tpi-GCS4,modified,5.5,U/mL,Native alpha-amylase activity,0.31x,4,alpha-amylase assay kit (Kikkoman),Fig. 2B,
 NEMOTO2009RNAI_010,NEMOTO2009RNAI_CHY,tpi-GCS5,modified,7.3,U/mL,Native alpha-amylase activity,0.41x,4,alpha-amylase assay kit (Kikkoman),Fig. 2B,
+JIN2016_001,JIN2016_AUTA_MUTANT,SlD-HLY,control,1.0,mg/L,Secreted HLY yield,1.0x,1,lysozyme activity assay (Micrococcus lysodeikticus),Results,
+JIN2016_002,JIN2016_AUTA_MUTANT,SlD-m3-HLY1,modified,2.0,mg/L,Secreted HLY yield,2.0x,1,lysozyme activity assay (Micrococcus lysodeikticus),Results,
+JIN2016_003,JIN2016_AUTA_MUTANT,SlD-m3-HLY2,modified,2.1,mg/L,Secreted HLY yield,2.1x,1,lysozyme activity assay (Micrococcus lysodeikticus),Results,
+JIN2016_004,JIN2016_AUTA_DELETION,SlD-d3-HLY1,modified,2.6,mg/L,Secreted HLY yield,2.6x,1,lysozyme activity assay (Micrococcus lysodeikticus),Results,Paper describes all four day-1 strains as two times the control; the stated values give 2.6x here.
+JIN2016_005,JIN2016_AUTA_DELETION,SlD-d3-HLY2,modified,2.2,mg/L,Secreted HLY yield,2.2x,1,lysozyme activity assay (Micrococcus lysodeikticus),Results,
+JIN2016_006,JIN2016_AUTA_MUTANT,SlD-HLY,control,12.9,mg/L,Secreted HLY yield,1.0x,4,lysozyme activity assay (Micrococcus lysodeikticus),Results,
+JIN2016_007,JIN2016_AUTA_MUTANT,SlD-m3-HLY1,modified,15.6,mg/L,Secreted HLY yield,1.21x,4,lysozyme activity assay (Micrococcus lysodeikticus),Results,
+JIN2016_008,JIN2016_AUTA_MUTANT,SlD-m3-HLY2,modified,15.2,mg/L,Secreted HLY yield,1.19x,4,lysozyme activity assay (Micrococcus lysodeikticus),Results,Fold is author-reported; 15.2/12.9 computes to 1.18x.
+JIN2016_009,JIN2016_AUTA_DELETION,SlD-d3-HLY1,modified,14.8,mg/L,Secreted HLY yield,1.15x,4,lysozyme activity assay (Micrococcus lysodeikticus),Results,
+JIN2016_010,JIN2016_AUTA_DELETION,SlD-d3-HLY2,modified,14.7,mg/L,Secreted HLY yield,1.14x,4,lysozyme activity assay (Micrococcus lysodeikticus),Results,

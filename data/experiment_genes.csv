@@ -60,3 +60,5 @@ NAKAJIMA2006_HACA_NCL,TODO,hacA,improve_folding,overexpression,PpgkA::active hac
 NEMOTO2009RNAI_CHY,TODO,amyA,reduce_competition,knockdown,pgAAiN hairpin RNA (amyB exon 9)
 NEMOTO2009RNAI_CHY,TODO,amyB,reduce_competition,knockdown,pgAAiN hairpin RNA (amyB exon 9)
 NEMOTO2009RNAI_CHY,TODO,amyC,reduce_competition,knockdown,pgAAiN hairpin RNA (amyB exon 9)
+JIN2016_AUTA_MUTANT,AO090120000003,autA,unknown,point_mutation,autA(m)::pyrG
+JIN2016_AUTA_DELETION,AO090120000003,autA,unknown,deletion,ΔautA::pyrG

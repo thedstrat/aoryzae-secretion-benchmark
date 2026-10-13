@@ -45,7 +45,7 @@ VOCABULARIES = {
     },
     "edit_type": {
         "disruption", "promoter_replacement", "deletion", "overexpression",
-        "knockdown",
+        "knockdown", "point_mutation",
     },
 }
 

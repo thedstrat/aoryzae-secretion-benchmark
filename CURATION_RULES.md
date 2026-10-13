@@ -10,10 +10,11 @@ Answer in order. If a paper fails any gate, STOP. Immediately tell the user whic
    as the measurement exists.
 2. **Is there a control to read it against?** Name the control strain.
 3. **Is the intervention a host-gene edit?** Deletion, disruption,
-   promoter replacement, overexpression or knockdown. Changes to the
-   expression construct alone (signal peptide, carrier, promoter, codon
-   optimization) and pure process optimization are out of scope for
-   now. A paper testing both is in scope for its host-gene arms only.
+   promoter replacement, overexpression, knockdown or point mutation.
+   Changes to the expression construct alone (signal peptide, carrier,
+   promoter, codon optimization) and pure process optimization are out
+   of scope for now. A paper testing both is in scope for its host-gene
+   arms only.
 
 Output one of these first, before any other text:
 
