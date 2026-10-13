@@ -312,6 +312,12 @@ something else again. An activity-derived mg/L is acceptable only when
 the authors report it or give the calibration needed to calculate it.
 Keep the assay name. **Never invent a conversion to mg/L.**
 
+Take the unit from what the figure plots, not from how the paper says
+the quantity was calculated. ANTONIEL2026 states that AbfA activity was
+"expressed as U/mg", but Fig. 2C plots "Relative AbfA Activity (%)"
+against a control at 100, so those rows are `% of control` and carry no
+amount. Read the axis label before choosing a unit.
+
 Format multiples as `1.0x`, `2.4x`. Keep an author-reported fold change
 distinct from one calculated off estimated bars. If a reported fold
 disagrees with the bars, keep the reported fold and note the

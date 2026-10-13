@@ -51,7 +51,7 @@ VOCABULARIES = {
     # only meaningful against another ratio in the same unit, measured the same
     # way. A new one is a maintainer decision like the vocabularies above.
     "unit": {
-        "mg/L", "U/mL", "U/mg", "% of control", "AU",
+        "mg/L", "U/mL", "% of control", "AU",
     },
 }
 
