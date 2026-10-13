@@ -62,3 +62,6 @@ NEMOTO2009RNAI_CHY,TODO,amyB,reduce_competition,knockdown,pgAAiN hairpin RNA (am
 NEMOTO2009RNAI_CHY,TODO,amyC,reduce_competition,knockdown,pgAAiN hairpin RNA (amyB exon 9)
 JIN2016_AUTA_MUTANT,AO090120000003,autA,unknown,point_mutation,autA(m)::pyrG
 JIN2016_AUTA_DELETION,AO090120000003,autA,unknown,deletion,ΔautA::pyrG
+ANTONIEL2026_MSNA_CAZY,TODO,msnA,target_regulator,overexpression,ISG::AnPgpdA-msnA-AnTtrpC
+ANTONIEL2026_MSNA_ABFA,TODO,msnA,target_regulator,overexpression,ISG::AnPgpdA-msnA-AnTtrpC
+ANTONIEL2026_CRZA_CAZY,TODO,crzA,target_regulator,overexpression,ISG::AnPgpdA-crzA-AnTtrpC
