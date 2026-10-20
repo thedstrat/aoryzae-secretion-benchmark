@@ -36,7 +36,8 @@ ARMS = {"control", "modified"}
 VOCABULARIES = {
     "host_effect": {
         "no_reported_defect", "conidiation_impaired", "conidiation_reduced",
-        "conidiation_largely_restored", "not_reported",
+        "conidiation_largely_restored", "alkaline_growth_defect",
+        "not_reported",
     },
     "gene_role": {
         "remove_protease", "fix_misrouting", "block_autophagy",
