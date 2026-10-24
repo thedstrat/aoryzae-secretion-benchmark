@@ -61,6 +61,11 @@ VOCABULARIES = {
 # short, and warning on that would fire on ordinary work in progress.
 USUAL_OUTCOME_ROWS = (4, 11)
 
+# A studies.csv summary is a plain-English overview of the paper, long enough to
+# stand on its own and short enough to stay readable. Only the ceiling is
+# enforced: a summary that is merely terse is a judgement call, not a defect.
+SUMMARY_MAX = 700
+
 
 def load(name):
     """Read a CSV as strings, keeping blank cells as empty strings rather than NaN."""
@@ -253,6 +258,46 @@ def unusual_outcome_counts(experiments, outcomes):
     ]
 
 
+def summary_is_before_notes(studies):
+    """Report studies.csv unless summary sits immediately before notes.
+
+    Position is checked, not just presence, so the plain-English overview and
+    the curation notes stay adjacent and in a fixed order for anyone reading
+    the file by eye or diffing it.
+    """
+    columns = list(studies.columns)
+    for wanted in ("summary", "notes"):
+        if wanted not in columns:
+            return [f"studies.csv has no {wanted} column; "
+                    "summary belongs immediately before notes"]
+    gap = columns.index("notes") - columns.index("summary")
+    if gap != 1:
+        return [f"summary is column {columns.index('summary') + 1} and notes is "
+                f"column {columns.index('notes') + 1}; summary must come "
+                "immediately before notes"]
+    return []
+
+
+def overlong_summaries(studies):
+    """Report every summary past SUMMARY_MAX characters."""
+    if "summary" not in studies.columns:
+        return []
+    return [
+        f"line {at_line(i)} ({studies.at[i, 'study_id']}): summary is "
+        f"{len(value)} characters, over the {SUMMARY_MAX} limit"
+        for i, value in studies["summary"].items()
+        if len(value) > SUMMARY_MAX
+    ]
+
+
+def missing_summaries(studies):
+    """Report every study with no summary written yet."""
+    if "summary" not in studies.columns:
+        return []
+    return rows_failing(studies, "summary", lambda v: v.strip(),
+                        "is empty", "study_id")
+
+
 def main(strict=False):
     studies = load("studies.csv")
     experiments = load("experiments.csv")
@@ -313,6 +358,13 @@ def main(strict=False):
 
         (f"experiments.csv: {EDITED_GENES} agrees with experiment_genes.csv",
             matches_gene_rows(experiments, genes)),
+
+        ("studies.csv: summary is the column immediately before notes",
+            summary_is_before_notes(studies)),
+        ("studies.csv: every study has a summary",
+            missing_summaries(studies)),
+        (f"studies.csv: no summary is over {SUMMARY_MAX} characters",
+            overlong_summaries(studies)),
     ]
 
     warnings = [

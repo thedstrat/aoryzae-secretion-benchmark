@@ -41,7 +41,8 @@ One row per published paper.
 | `doi` | Digital Object Identifier for the paper. |
 | `pmid` | PubMed identifier for the paper. |
 | `pdf_url` | Direct link to the article PDF, where a stable official publisher or repository link exists. |
-| `notes` | Facts about the paper as a whole, recorded once here instead of repeated on every experiment row. Anything that varies between the experiments within a paper belongs on the experiment row instead. |
+| `summary` | Plain-English overview of what the paper did and what it found, written for someone who has never read it and may have no biology background. Two to four sentences, 700 characters at most, explaining unfamiliar terms as it goes and keeping demonstrated results distinct from proposed explanations. It names no yields, fold changes or concentrations, which belong in `outcomes.csv`; structural counts, such as how many genes a paper tested, are fine. It describes the publication, never how far its curation has got. |
+| `notes` | Facts about the paper as a whole, recorded once here instead of repeated on every experiment row. Anything that varies between the experiments within a paper belongs on the experiment row instead. Technical curation detail rather than an overview: measurement caveats, strain lineage, contradictions in the source. The plain-English overview is `summary`. |
 
 ### `experiments.csv`
 
@@ -84,6 +85,7 @@ Where a fact belongs:
 | A qualitative host phenotype | `experiments.csv` `host_effect` |
 | Interpretation or a caveat for one experiment | `experiments.csv` `notes` |
 | A fact or caveat shared across a paper's experiments | `studies.csv` `notes` |
+| A plain-English account of what a paper did and found | `studies.csv` `summary` |
 
 Reading one row: `JIN2007_TPPA_PEPE` expressed human lysozyme in strain `NA-2L-peE10`, measured against control `N-2L`. Both strains carry the same cargo construct and were grown the same way, so the difference between them is attributable to the gene edits, which are listed in `experiment_genes.csv`.
 
