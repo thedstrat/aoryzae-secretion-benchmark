@@ -59,7 +59,7 @@ Repeating the same comparison is not. Labs usually build several strains carryin
 | `cargo` | The protein the fungus was engineered to produce and secrete ("cargo" is standard usage for anything moved through the secretory pathway). |
 | `construct` | The DNA design used to express the cargo, written as the paper writes it: the promoter, any carrier protein the cargo is fused to, the cleavage site, the terminator, and the selection marker. |
 | `conditions` | How the fungus was grown, one string in fixed order: medium, starting pH (with the pH it drifted to, if reported), volume, temperature, inoculum, duration. Production numbers only compare between strains grown the same way. `5x DPY, pH 5.5 (5.3 by d4), 20 mL, 30C, 2e5 conidia, 3-6 d` reads as: five-times-strength DPY broth, pH 5.5 falling to 5.3 by day 4, 20 mL, 30 degrees C, inoculated with 200,000 spores, sampled days 3-6. |
-| `host_effect` | Reported qualitative effect of the intervention on the fungus itself, such as growth, sporulation, or morphology. Kept to a short standard value so the column can be filtered: `no_reported_defect`, `conidiation_impaired`, `conidiation_reduced`, `conidiation_largely_restored`, `alkaline_growth_defect`, `not_reported`. Numeric phenotype measurements belong in `outcomes`. |
+| `host_effect` | Reported qualitative effect of the intervention on the fungus itself, such as growth, sporulation, or morphology. Kept to a short standard value so the column can be filtered: `no_reported_defect`, `conidiation_impaired`, `conidiation_reduced`, `conidiation_largely_restored`, `alkaline_growth_defect`, `cell_wall_weakened`, `not_reported`. Numeric phenotype measurements belong in `outcomes`. |
 | `notes` | Experiment-specific caveats or context needed to interpret the result. Facts that apply to the whole paper live in `studies.csv` `notes` instead. |
 
 `experiment_genes.csv` is the source of truth for gene edits. `edited_genes_vs_control` in `experiments.csv` is a generated summary of the edits that differ from the experiment's control, not the strain's full genotype. Regenerate it with `scripts/build_edited_genes.py` after changing experiments or gene-edit rows; never edit it by hand.
@@ -73,6 +73,7 @@ The `host_effect` values:
 | `conidiation_reduced` | Conidia formation was affected, but the strain still produced some. |
 | `conidiation_largely_restored` | Conidia formation returned to near control levels. |
 | `alkaline_growth_defect` | Unable to grow under the tested alkaline conditions. |
+| `cell_wall_weakened` | Measurably more sensitive to agents that attack the cell wall. |
 | `not_reported` | The paper reports no relevant host phenotype. Host effects are never inferred. |
 
 Where a fact belongs:

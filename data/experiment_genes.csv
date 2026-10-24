@@ -70,3 +70,8 @@ YAVER2000_PALB_FLASK,TODO,palB,target_regulator,disruption,palB disrupted with p
 YAVER2000_PALB_FERMENTOR,TODO,palB,target_regulator,disruption,palB disrupted with pyrG via pMT1936
 NEMOTO2009AUT_TPPA_PEPE_CHY,TODO,tppA,remove_protease,disruption,ΔtppA::argB
 NEMOTO2009AUT_TPPA_PEPE_CHY,TODO,pepE,remove_protease,disruption,ΔpepE::adeA
+MIYAZAWA2019_AGS_CUTL1,TODO,agsA,change_shape,deletion,agsA::loxP
+MIYAZAWA2019_AGS_CUTL1,TODO,agsB,change_shape,deletion,agsB::loxP
+MIYAZAWA2019_AGS_CUTL1,TODO,agsC,change_shape,deletion,agsC::loxP
+MIYAZAWA2019_GAG_CUTL1,TODO,sphZ,change_shape,deletion,sphZugeZ::adeA
+MIYAZAWA2019_GAG_CUTL1,TODO,ugeZ,change_shape,deletion,sphZugeZ::adeA
