@@ -68,3 +68,5 @@ ANTONIEL2026_CRZA_CAZY,TODO,crzA,target_regulator,overexpression,ISG::AnPgpdA-cr
 YAVER2000_PALB_PLATE,TODO,palB,target_regulator,disruption,palB disrupted with pyrG via pMT1936
 YAVER2000_PALB_FLASK,TODO,palB,target_regulator,disruption,palB disrupted with pyrG via pMT1936
 YAVER2000_PALB_FERMENTOR,TODO,palB,target_regulator,disruption,palB disrupted with pyrG via pMT1936
+NEMOTO2009AUT_TPPA_PEPE_CHY,TODO,tppA,remove_protease,disruption,ΔtppA::argB
+NEMOTO2009AUT_TPPA_PEPE_CHY,TODO,pepE,remove_protease,disruption,ΔpepE::adeA
