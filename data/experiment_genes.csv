@@ -77,3 +77,14 @@ MIYAZAWA2019_AGS_CUTL1,TODO,agsB,change_shape,deletion,agsB::loxP
 MIYAZAWA2019_AGS_CUTL1,TODO,agsC,change_shape,deletion,agsC::loxP
 MIYAZAWA2019_GAG_CUTL1,TODO,sphZ,change_shape,deletion,sphZugeZ::adeA
 MIYAZAWA2019_GAG_CUTL1,TODO,ugeZ,change_shape,deletion,sphZugeZ::adeA
+MIYAZAWA2016_AGS_CUTL1_YPM,TODO,agsA,change_shape,deletion,agsAΔ::loxP
+MIYAZAWA2016_AGS_CUTL1_YPM,TODO,agsB,change_shape,deletion,agsBΔ::loxP
+MIYAZAWA2016_AGS_CUTL1_YPM,TODO,agsC,change_shape,deletion,agsCΔ::loxP
+MIYAZAWA2016_QUINTUPLE_CUTL1_YPM,TODO,agsA,change_shape,deletion,agsAΔ::loxP
+MIYAZAWA2016_QUINTUPLE_CUTL1_YPM,TODO,agsB,change_shape,deletion,agsBΔ::loxP
+MIYAZAWA2016_QUINTUPLE_CUTL1_YPM,TODO,agsC,change_shape,deletion,agsCΔ::loxP
+MIYAZAWA2016_QUINTUPLE_CUTL1_YPM,TODO,amyD,change_shape,deletion,amyDΔamyGΔ::adeA
+MIYAZAWA2016_QUINTUPLE_CUTL1_YPM,TODO,amyG,change_shape,deletion,amyDΔamyGΔ::adeA
+MIYAZAWA2016_AGS_CUTL1_YPDS,TODO,agsA,change_shape,deletion,agsAΔ::loxP
+MIYAZAWA2016_AGS_CUTL1_YPDS,TODO,agsB,change_shape,deletion,agsBΔ::loxP
+MIYAZAWA2016_AGS_CUTL1_YPDS,TODO,agsC,change_shape,deletion,agsCΔ::loxP

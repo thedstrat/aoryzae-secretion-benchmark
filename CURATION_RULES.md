@@ -92,6 +92,7 @@ The types:
     TEMPERATURE
     FEED_RATE
     CULTURE_SCALE
+    INOCULUM
 
 The same restriction applies. Tag a condition the paper varied and
 compared, not one it simply grew everything in. A process result can

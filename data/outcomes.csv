@@ -131,3 +131,15 @@ MIYAZAWA2019_003,MIYAZAWA2019_GAG_CUTL1,AG-GAGΔ-cutL1,modified,10.3,mg/L,Secret
 MIYAZAWA2019_004,MIYAZAWA2019_AGS_CUTL1,WT-cutL1,control,200,mg/L,Mycelial dry weight,1.0x,1,dried at 70C and weighed,Fig. 9C,"Read from Fig. 9C; plotted as 10 mg per 50 mL, converted to mg/L."
 MIYAZAWA2019_005,MIYAZAWA2019_AGS_CUTL1,AGΔ-cutL1,modified,940,mg/L,Mycelial dry weight,4.70x,1,dried at 70C and weighed,Fig. 9C,"Read from Fig. 9C; plotted as 47 mg per 50 mL. Fig. 9C marks this difference from WT as not significant."
 MIYAZAWA2019_006,MIYAZAWA2019_GAG_CUTL1,AG-GAGΔ-cutL1,modified,2160,mg/L,Mycelial dry weight,2.30x,1,dried at 70C and weighed,Fig. 9C,"Read from Fig. 9C; plotted as 108 mg per 50 mL. 10.8x against WT-cutL1, which is where the paper's stated 10-fold comes from."
+MIYAZAWA2016_001,MIYAZAWA2016_AGS_CUTL1_YPM,wild-type-cutL1,control,4.1,mg/L,Secreted CutL1 concentration,1.0x,1,SDS-PAGE densitometry (ImageJ),Fig. 3E,Approximate figure reading.
+MIYAZAWA2016_002,MIYAZAWA2016_AGS_CUTL1_YPM,tripleΔ-cutL1,modified,8.9,mg/L,Secreted CutL1 concentration,2.0x,1,SDS-PAGE densitometry (ImageJ),Fig. 3E,Authors report approximately 2x; estimated bars imply 2.17x.
+MIYAZAWA2016_003,MIYAZAWA2016_QUINTUPLE_CUTL1_YPM,quintupleΔ-cutL1,modified,8.4,mg/L,Secreted CutL1 concentration,2.0x,1,SDS-PAGE densitometry (ImageJ),Fig. 3E,Authors report approximately 2x; estimated bars imply 2.05x.
+MIYAZAWA2016_004,MIYAZAWA2016_AGS_CUTL1_YPM,wild-type-cutL1,control,2100,mg/L,Mycelial dry weight,1.0x,1,dry weight measurement,Fig. 3C,Approximate reading; converted from mg per 50 mL.
+MIYAZAWA2016_005,MIYAZAWA2016_AGS_CUTL1_YPM,tripleΔ-cutL1,modified,4000,mg/L,Mycelial dry weight,1.90x,1,dry weight measurement,Fig. 3C,Approximate reading; converted from mg per 50 mL.
+MIYAZAWA2016_006,MIYAZAWA2016_QUINTUPLE_CUTL1_YPM,quintupleΔ-cutL1,modified,3800,mg/L,Mycelial dry weight,1.81x,1,dry weight measurement,Fig. 3C,Approximate reading; converted from mg per 50 mL.
+MIYAZAWA2016_011,MIYAZAWA2016_AGS_CUTL1_YPDS,wild-type-cutL1,control,25,mg/L,Secreted CutL1 concentration,1.0x,2.5,SDS-PAGE densitometry (ImageJ),Fig. 4B,Approximate 60 h figure reading.
+MIYAZAWA2016_012,MIYAZAWA2016_AGS_CUTL1_YPDS,tripleΔ-cutL1,modified,38,mg/L,Secreted CutL1 concentration,1.5x,2.5,SDS-PAGE densitometry (ImageJ),Fig. 4B,Authors report approximately 1.5x at 60 h.
+MIYAZAWA2016_013,MIYAZAWA2016_AGS_CUTL1_YPDS,wild-type-cutL1,control,36,mg/L,Secreted CutL1 concentration,1.0x,3,SDS-PAGE densitometry (ImageJ),Fig. 4B,Approximate 72 h figure reading.
+MIYAZAWA2016_014,MIYAZAWA2016_AGS_CUTL1_YPDS,tripleΔ-cutL1,modified,61,mg/L,Secreted CutL1 concentration,1.7x,3,SDS-PAGE densitometry (ImageJ),Fig. 4B,Authors report approximately 1.7x at 72 h.
+MIYAZAWA2016_015,MIYAZAWA2016_AGS_CUTL1_YPDS,wild-type-cutL1,control,9000,mg/L,Mycelial dry weight,1.0x,3,dry weight measurement,Fig. 4C,Approximate 72 h reading; converted from mg per 5 mL.
+MIYAZAWA2016_016,MIYAZAWA2016_AGS_CUTL1_YPDS,tripleΔ-cutL1,modified,11800,mg/L,Mycelial dry weight,1.31x,3,dry weight measurement,Fig. 4C,Approximate 72 h reading; converted from mg per 5 mL.
